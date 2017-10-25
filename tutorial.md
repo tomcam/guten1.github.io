@@ -240,6 +240,11 @@ And this becomes a standard paragraph.
 Let's create a short article for the new site. Call it `article.md` and save it in /content:
 
 ```
++++ 
+title = "Announcing the Starter theme" 
+template = "page.html" 
+date = "2017-12-01" 
++++ 
 # New Gutenberg theme named Starter announced
 
 A new, ultra-simplified Gutenberg theme named `Starter` has been 
@@ -260,19 +265,6 @@ Done in 22ms.
 ```
 
 ## TODO: Explain directory structure
-
-## Add some content
-
-* Create the file `/content/_index.md` with these contents:
-
-```
-+++
-+++
-
-hello, world.
-```
-
-
 
 ## View the site
 
@@ -298,5 +290,34 @@ Web server is available at http://127.0.0.1:1111
 
 * To view your handywork, open a browser and copy in the address `http://127.0.0.1:1111`:
 
-An empty site appears.
+## TODO
+
+* maybe show directory tree with eqch new piece of content 
+* Mention that articles using page.html template need particular front matter and that filename doesn't matter
+
+## Add a second page
+
+To understand how the Hyde theme works, add a second article.
+
+Name this `article2.md` and save it in /content:
+
+```
++++ 
+title = "Starter theme tutorial launched" 
+template = "page.html" 
+date = "2017-12-03" 
++++ 
+# Gutenberg Starter theme gets full tutorial treatment
+
+The Gutenberg theme named `Starter` was designed
+for tutorial purposes, although it's perfectly capable
+of being used in production. This tutorial shows how
+it was built line by line.
+
+```
+
+## TODO
+
+* Rebuild if necessary
+
 
