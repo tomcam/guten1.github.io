@@ -68,7 +68,8 @@ This tutorial assumes you know:
 
 * HTML and CSS basics
 * How to use a plain text editor
-* How to start and stop the terminal program for your operating system and perform simple command-line operations such as copying and deleting files
+* How to start and stop the terminal program for your operating system 
+* How to perform simple command-line operations such as copying and deleting files
 
 ## What you don't need to know before running this tutorial
 
@@ -77,7 +78,7 @@ You don't need to know about using competing products such as WordPress, Jekyll,
 ## How this tutorial works
 
 This tutorial takes you almost keystroke-by-keystroke through everything you need to create a functioning
-corporate website with a home page, an About page, different sections, and a blog. You will be shown how to;
+corporate website with a home page, an About page, different sections, and a blog. You will be shown how to:
 
 * Download Gutenberg and copy it to a directory on the path
 * Use it to generate a stub website
@@ -89,28 +90,69 @@ corporate website with a home page, an About page, different sections, and a blo
 The first thing to do is obtain the Gutenberg static site generator. It is small and fast, and because it's a command-line utility written in Rust, Gutenberg works on all operating systems that have a Rust compiler and a web server available to them. You don't need to know Rust to use Gutenberg effectively, although understanding Rust's templating will make it easier
 for you to create Gutenberg themes.
 
-At the time of writing, Gutenberg lacks installers for most operating systems but that barely matters.
+At the time of writing, Gutenberg lacks installers for most operating systems but that barely matters. It consists of a single executable file you run from the command line.
 
-About to create a local-only test site named example, as if it were on example.com
-Downloaded gutenberg at www.getgutenberg.io
-Copied it to the path:
+* Follow the download instructions at www.getgutenberg.io
+* Copy the executable to a location on the path. For example, on Macs and many Linux variations the following would work:
+
+```sh
+# Copy from the OS X Downloads directory to a location on the path.
+# In many operating systems, ~ means the user's home directory,
+# sort of like My Documents on Windows.
+# sudo means run from an elevated adminstrator level.
+# It is not always necessary and depends on the operating system.
 $ sudo cp ~/Downloads/gutenberg /usr/local/bin/
-Created a directory for the website:
-$ cd ~
-$ mkdir  www  # Could be named anything. www is not required.
-Create a stub project
-$ cd www
-$ gutenberg init blogcertification
+```
 
+The site will be deployed from a directory of your choice. For various reasons
+I like it to come from a subdirectory on my machine using a convention similar
+to some web hosts, which often treat a site name something like `www` as the
+first place on the path they look to server web pages from.
+
+```sh 
+# Create a site source code directory
+# It can be named anything, but often web
+# servers deploy from a directory with a name 
+# similar to this one.
+# This only needs to be done once.
+# So the site source code will end up in 
+# directories named like this:
+# ~/www/mycharity ~/www/myhomepage ~/www/mysoccerteam
+$ mkdir ~/wwwe 
+```
+
+* Now change to the directory you just created:
+
+```sh
+#  Go where all your site source code will be.
+$ cd ~/www
+```
+
+* From this starting directory you'll run Gutenberg, which will
+generate a simple site:
+
+```sh
+# Replace mywebsite with the root name of your site, like bobsrestaurant or whatever.
+$ gutenberg init mywebsite
+```
+
+* You are asked a short series of questions.
+
+```
 Welcome to Gutenberg!
-> What is the URL of your site? (https://example.com): http://blogcertification.com OR http://127.0.0.1:1111
-> Do you want to enable Sass compilation? [Y/n]: y or press Enter to accept Y, the default as you can tell because it's uppercase
+
+> What is the URL of your site? (https://example.com): http://127.0.0.1:1111
+> Do you want to enable Sass compilation? [Y/n]: y or press 
+Enter to accept Y, the default as you can tell because it's uppercase
 > Do you want to enable syntax highlighting? [y/N]: y
 
-Done! Your site was created in "/Users/tom/www/blogcertification"
+Done! Your site was created in "/Users/tom/www/mywebsite"
+```
 
-Take a look at the contents of the directory
-$ ls blogcertification
+* Take a look at the contents of the directory that it just created. You've
+created something! Let's see what it looks like.
+
+$ ls mywebsite
 config.toml	sass		templates
 content		static		themes
 
