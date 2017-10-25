@@ -223,6 +223,30 @@ theme = "hyde"
 # Put all your custom variables here
 ```
 
+## Add a page
+
+The site is empty right now. It needs some content. We'll write an article using markdown. Normally a markdown document looks something like this (but it's insufficient for Gutenberg).
+
+```
+# This will become an H1 header.
+
+Just add an extra pound sign for each header level. For example:
+
+## Render me as an H2 header.
+
+And this becomes a standard paragraph.
+```
+
+Let's create a short article for the new site. Call it `article.md` and save it in /content:
+
+```
+# New Gutenberg theme named Starter announced
+
+A new, ultra-simplified Gutenberg theme named `Starter` has been 
+added to the gallery. It's a minimalist theme you can build
+on for your next custom Gutenberg theme.
+```
+
 ## Build the site
 
 Now it's time to convert the site's stub .md files to HTML. Gutenberg combines HTML templates
