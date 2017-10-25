@@ -214,7 +214,7 @@ cd ~/www/mywebsite
 theme = "hyde"
 ```
 
-So it looks something like this:
+So that part of `config.toml` will be something along these lines:
 
 ```
 theme = "hyde"
@@ -234,6 +234,21 @@ Building site...
 -> Creating 0 pages (0 orphan) and 0 sections
 Done in 22ms.
 ```
+
+## TODO: Explain directory structure
+
+## Add some content
+
+* Create the file `/content/_index.md` with these contents:
+
+```
++++
++++
+
+hello, world.
+```
+
+
 
 ## View the site
 
