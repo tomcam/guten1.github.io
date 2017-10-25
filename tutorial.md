@@ -197,39 +197,67 @@ hyde
 
 ## Update config.toml with name of current theme
 
+Now you need to specify to Gutenberg what theme is being used (because you could put other
+themes in the `/themes` directory).
 
-Now you need to specify what theme is being used, and the URL of the site.
-Return to the site's root directory:
+* Return to the site's root directory:
 
 ```sh
 cd ~/www/mywebsite
-Bring up config.toml in your editor. For example:
-$ vim config.toml
-Add this line to config.toml ABOVE the section marked [extra]:
+```
 
+* Open the file `config.toml` in a text editor.
+
+8 Add this line to config.toml anywhere ABOVE the section marked `[extra]`:
+
+```
 theme = "hyde"
+```
 
 So it looks something like this:
 
+```
 theme = "hyde"
+
 [extra]
 # Put all your custom variables here
+```
 
-Generate the site:
+## Build the site
 
+Now it's time to convert the site's stub .md files to HTML. Gutenberg combines HTML templates
+with the markup files, and the output is pure HTML files the browser can understand.
+
+```sh
 $ gutenberg build
 Building site...
 -> Creating 0 pages (0 orphan) and 0 sections
 Done in 22ms.
+```
 
+## View the site
 
-Viewing the site
-Get started by using the built-in server: `gutenberg serve`
-* Run the server
+Gutenberg can run as a web server, allowing you to view the site exactly as end users will see it upon publishing
+to the production server.
 
+You should open a new terminal window for this because the server runs in a loop waiting for web requests.
+You'll want another terminal open so you can view files and directory contents.
+
+* Open a new terminal window.
+* Change to the project directory. In this case, you'd do something like this:
+
+```sh
+cd ~/www/mywebsite
+```
+* Run the server;
+
+```sh
 $ gutenberg serve
-Listening for changes in /Users/tom/www/blogcertification/{content, static, templates, sass}
+Listening for changes in /Users/tom/www/mywebsite/{content, static, templates, sass}
 Web server is available at http://127.0.0.1:1111
-Open a browser and copy in the address http://127.0.0.1:1111
+```
+
+* To view your handywork, open a browser and copy in the address `http://127.0.0.1:1111`:
+
 An empty site appears.
 
