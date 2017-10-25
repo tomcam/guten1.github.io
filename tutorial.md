@@ -118,7 +118,7 @@ first place on the path they look to server web pages from.
 # So the site source code will end up in 
 # directories named like this:
 # ~/www/mycharity ~/www/myhomepage ~/www/mysoccerteam
-$ mkdir ~/wwwe 
+$ mkdir ~/www 
 ```
 
 * Now change to the directory you just created:
@@ -142,8 +142,7 @@ $ gutenberg init mywebsite
 Welcome to Gutenberg!
 
 > What is the URL of your site? (https://example.com): http://127.0.0.1:1111
-> Do you want to enable Sass compilation? [Y/n]: y or press 
-Enter to accept Y, the default as you can tell because it's uppercase
+> Do you want to enable Sass compilation? [Y/n]: y 
 > Do you want to enable syntax highlighting? [y/N]: y
 
 Done! Your site was created in "/Users/tom/www/mywebsite"
@@ -152,28 +151,58 @@ Done! Your site was created in "/Users/tom/www/mywebsite"
 * Take a look at the contents of the directory that it just created. You've
 created something! Let's see what it looks like.
 
+## XXX Todo: explain these directories
+
+```sh
 $ ls mywebsite
 config.toml	sass		templates
 content		static		themes
+```
 
-Installing a Gutenberg theme
-Go to the themes directory for your site.
-$ cd blogcertification/themes
-Obtain a theme from Github.
+## Install a Gutenberg theme
+
+Before you see what the site looks like, install a theme. It
+will be easier to see what kind progress you're making as you build
+your new site.
+
+* Go to the themes directory for your site:
+
+```sh
+$ cd ~/www/mywebsite/themes
+```
+
+* Obtain the Hyde theme from Github.
+
+```sh
 $ git clone https://github.com/Keats/hyde.git
-This will create a directory named hyde populated by other directories and files that make up that theme. 
+```
+
+This creates a directory named `hyde` (at `~/www/mywebsite/themes/hyde`) populated by other directories and files that make up that theme. 
+
 After a pause you see the following:
 
+```
 Cloning into 'hyde'...
 remote: Counting objects: 32, done.
 remote: Total 32 (delta 0), reused 0 (delta 0), pack-reused 32
 Unpacking objects: 100% (32/32), done.
-Now take a look:
+```
+
+* Now take a look:
+
+```sh
 $ ls
 hyde
+```
+
+## Update config.toml with name of current theme
+
+
 Now you need to specify what theme is being used, and the URL of the site.
-Return to the site's root directory;
-cd ..
+Return to the site's root directory:
+
+```sh
+cd ~/www/mywebsite
 Bring up config.toml in your editor. For example:
 $ vim config.toml
 Add this line to config.toml ABOVE the section marked [extra]:
