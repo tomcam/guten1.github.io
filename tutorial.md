@@ -28,14 +28,14 @@ Gutenberg excels at creating small to medium sites with some or all of these cha
 * Brochure sites
 * Academic styles
 * Blogs
-* News sites, divided into sections
+* News sites (simple or divided into sections)
 * Personal sites
 
 ### When to avoid Gutenberg
 
 Gutenberg doesn't work like WordPress, which stores its articles in a database, then renders and formats them
-each time they are viewed. This data-driven approach means that interactive featuers like
-discussion threads
+each time they are viewed. This data-driven approach means that interactive features like
+discussion threads aren't practical with Gutenberg. Of course, there's nothing wrong with making those pages using a server side language such as PHP or Python and doing the rest of the site in Gutenberg.
 
 ## Pros and cons of using Gutenberg to generate your static website
 
@@ -45,9 +45,10 @@ Here are reasons both for and against using Gutenberg.
 
 * The websites Gutenberg creates are normally small and very fast
 * Because the text files you use to create articles and posts using Gutenberg is based on Markdown, it's 
-very easy to read them. None of the angle bracket madness you'll see in HTML.
+very easy to read them. None of the angle bracket madness you'll see in HTML. The source code for pages and articles is just Markdown and a little extra configuration in the header.
 This lets you concentrate on writing articles instead of counting angle brackets or HTML tags and attributes.
 * Once you know how to use the toolchain, Gutenberg lets you generate sites quickly
+* Gutenberg is fantastic if you want a great-looking site that's also easy to maintain (once you know how it works
 * You can automate the creation and maintenance of websites
 * You only need a single executable file
 * Has [Sass](http://sass-lang.com/guide) built in (no external programs are run) so
@@ -59,8 +60,9 @@ dumb questions with patience
 ### Gutenberg Cons
 
 * It's a command-line utility. You pretty much have to be a programmer/devops person to 
-use Gutenberg. Installing it, which means downloading a single file and copying it to a directory,
-is marginally harder then just clicking an installer.
+use Gutenberg. Downloading a single file and copying it to a directory
+is arguably a little harder than harder than downloading, then clicking an installer
+* A tiny Gutenberg site is a little more complicated than a tiny HTML site, due to its configuration requirements
 
 ## What you should know before running this tutorial
 
@@ -70,6 +72,7 @@ This tutorial assumes you know:
 * How to use a plain text editor
 * How to start and stop the terminal program for your operating system 
 * How to perform simple command-line operations such as copying and deleting files
+* How the path specification for executable files works in your operating system
 
 ## What you don't need to know before running this tutorial
 
