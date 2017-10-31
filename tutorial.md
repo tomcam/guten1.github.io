@@ -211,7 +211,7 @@ cd ~/www/mywebsite
 
 * Open the file `config.toml` in a text editor.
 
-8 Add this line to config.toml anywhere ABOVE the section marked `[extra]`:
+* Add this line to config.toml anywhere ABOVE the section marked `[extra]`:
 
 ```
 theme = "hyde"
