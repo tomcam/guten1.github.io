@@ -33,9 +33,10 @@ Gutenberg excels at creating small to medium sites with some or all of these cha
 
 ### When to avoid Gutenberg
 
-Gutenberg doesn't work like WordPress, which stores its articles in a database, then renders and formats them
+* Gutenberg doesn't work like WordPress, which stores its articles in a database, then renders and formats them
 each time they are viewed. This data-driven approach means that interactive features like
 discussion threads aren't practical with Gutenberg. Of course, there's nothing wrong with making those pages using a server side language such as PHP or Python and doing the rest of the site in Gutenberg.
+* If you need WordPress plugins, don't use Gutenberg
 
 ## Pros and cons of using Gutenberg to generate your static website
 
