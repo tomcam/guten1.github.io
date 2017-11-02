@@ -236,11 +236,16 @@ The empty content directory is where your articles will go. They are written in 
 
 ### templates directory
 
-The empty templates directory is where templates like `page.html` and `index.html` will be merged with the content articles.
+The empty templates directory is where templates like `page.html` and `index.html` will be merged with the content articles
+to yield formatted content. The appearance can be vastly different depending on how themes are created.
 
 ### static directory
 
-Assets like logo files, SASS files, CSS icons, fonts, and so forth usually go in the `static` directory.
+Assets like logo files, CSS icons, fonts, and so forth usually go in the `static` directory.
+
+### sass directory
+
+The `.scss` files used by Sass to generate CSS files go here.
 
  ### config.toml
  
@@ -296,7 +301,16 @@ LICENSE		sass		static		theme.toml
 README.md	screenshot.png	templates
 ```
 
-If you go further and look in the generated directories, you'll see that the `
+If you go further and look in the generated directories, you'll see that they resemble what you saw in the
+website's root directory. This time they are populated with template files such as `index.html` and `page.html`,
+Sass source files, and a `screenshot.png` file showing an example home page made using the Hyde theme.
+
+### No content directory?
+
+The main difference between the contents of this theme directory and the site's root directory is 
+the lack of a `/content` directory. That's because your site is skinnable using themes. Your site can use
+multiple themes. Only one is active at a time, but they all draw from the `/content` directory for the 
+site's editorial material.
 
 ## Update config.toml with name of current theme
 
@@ -355,7 +369,7 @@ added to the gallery. It's a minimalist theme you can build
 on for your next custom Gutenberg theme.
 ```
 
-## Build the site
+## Generate the site with `gutenberg build`
 
 Now it's time to convert the site's stub .md files to HTML. Gutenberg combines HTML templates
 with the markup files, and the output is pure HTML files the browser can understand.
@@ -367,9 +381,7 @@ Building site...
 Done in 22ms.
 ```
 
-## TODO: Explain directory structure
-
-## View the site
+## View the site using the `gutenberg serve` web server
 
 Gutenberg can run as a web server, allowing you to view the site exactly as end users will see it upon publishing
 to the production server.
@@ -381,9 +393,13 @@ You'll want another terminal open so you can view files and directory contents.
 * Change to the project directory. In this case, you'd do something like this:
 
 ```sh
+# This example assumes your Gutenberg projects
+# are in a subdirectory named www
+# and that the example is named mywebsite.
+# Change these values as needed.
 cd ~/www/mywebsite
 ```
-* Run the server;
+* Run the server:
 
 ```sh
 $ gutenberg serve
