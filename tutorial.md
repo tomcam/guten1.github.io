@@ -114,7 +114,7 @@ to some web hosts, which often treat a site name something like `www` as the
 first place on the path they look to server web pages from.
 
 ```sh 
-# Create a site source code directory
+# Create a site source code directory.
 # It can be named anything, but often web
 # servers deploy from a directory with a name 
 # similar to this one.
@@ -132,7 +132,9 @@ $ mkdir ~/www
 $ cd ~/www
 ```
 
-* From this starting directory you'll run Gutenberg, which will
+## Run `gutenberg init` to create a basic site
+
+* From this starting directory you'll run `gutenberg init`, which will
 generate a simple site:
 
 ```sh
@@ -142,7 +144,11 @@ $ gutenberg init mywebsite
 
 You are asked a short series of configuration questions. They will be used to generate a human-readable file
 named  `config.toml`. For this quick demo the answers don't matter
-much but here's what they mean.
+much but here's what they mean. Keep in mind too that it's easy to go back and edit these values in `config.toml`
+directly should you change your mind about anything.
+
+### Configuration questions for `config.toml`: site URL
+
 First, you're asked what the site's web address (URL) will be. This will be important when
 relative paths to resources in the webbsite are compiled.
 
@@ -152,14 +158,23 @@ Welcome to Gutenberg!
 > What is the URL of your site? (https://example.com):
 ```
 
-For now, it doesn't matter much but I'm a stickler and I answer with the local website address preferred by Gutenberg,
-which is 'http://127.0.0.1:1111'. The great thing about `config.toml` is that when you deploy to `yourawesomewebsite.com` changing
-this will be all you need to get those relative paths working properly.
-
+For now, it doesn't matter much. For this example feel faree to answer with the local website address preferred by Gutenberg,
+which is `http://127.0.0.1:1111`. The great thing about `config.toml` is that when you deploy to `yourawesomewebsite.com`, changing this value will be all you need to get those relative paths working properly.
+ 
 ```
 > What is the URL of your site? (https://example.com): http://127.0.0.1:1111
 
 ```
+
+For example, you'll see constructions like this:
+
+```
+<link rel="stylesheet" href="{{ get_url(path="hyde.css") }}">
+```
+
+As you can imagine `get_url()` resolves to your site's URL using the value in `config.toml` that you just set.
+
+### Configuration questions for `config.toml`: Whether to use Sass
 
 The next question is about Sass. Sass is a front end to CSS. You create a style sheet called,
 for example, `styles.scss`, and it will run a translation step, then generate a `styles.css` file. 
@@ -177,23 +192,37 @@ body {
 }
 ```
 
+Most environments require you to download Sass separately, but one of the niftiest features of Gutenberg is that it does all this internally, for the low low price of the gutenberg executable itself.
+
+Note that the possible answers are in mixed case, in this case `Y` and `n`. This means that presing Enter is the same as 
+selecting whatever the uppercase option was.
+
+* Press Enter to notify Gutenberg that when found, `.scss` files should be compiled to CSS.
 
 ```
 > Do you want to enable Sass compilation? [Y/n]:
 ```
 
+### Configuration questions for `config.toml`: use syntax highlighting
 
+
+Last, you're asked if you want to enable syntax highlighting. This means that should your blog markup contain code,
+it will be displayed with keywords, identifiers, comments, and so on displayed using different colors. The color
+schemes themselves are configurable.
+
+* Press the `y` key if you plan for this blog to include code.
+
+```
 > Do you want to enable syntax highlighting? [y/N]: y
 
 Done! Your site was created in "/Users/tom/www/mywebsite"
 ```
 
-* Take a look at the contents of the directory that it just created. You've
-created something! Let's see what it looks like.
+Let's explore what you've just created.
 
 ## What's in your new Gutenberg directory
 
-* If you get a directory listing for new site, you'll find that Gutenberg just did very little for you--a theme is necessary.
+* If you get a directory listing for new site, you'll find that Gutenberg just did very little for you--a theme is necessary for it to display anything but nonempty HTML files. One hasn't been specified yet.
 
 ```sh
 $ ls mywebsite
@@ -211,18 +240,29 @@ The empty templates directory is where templates like `page.html` and `index.htm
 
 ### static directory
 
-Assets like logo files, icons, fonts, and so forth 
+Assets like logo files, SASS files, CSS icons, fonts, and so forth usually go in the `static` directory.
 
  ### config.toml
  
  The file `config.toml` has many options, only a few of which are included in this auto-generated file.
- You can see they contained the answers to questions you were asked after running `gutenberg init`.
+ You can see they contained the answers to questions you were asked after running `gutenberg init`:
+ 
+ ```
+ # The URL the site will be built for
+base_url = "http://127.0.0.1:1111"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Gutenberg
+highlight_code = true
+
+```
 
 ## Install a Gutenberg theme
 
-Before you see what the site looks like, install a theme. It
-will be easier to see what kind progress you're making as you build
-your new site.
+Before you see what the site looks like, install or create a theme. Let's download the best-known one.
 
 * Go to the themes directory for your site:
 
@@ -255,6 +295,8 @@ themes/hyde/
 LICENSE		sass		static		theme.toml
 README.md	screenshot.png	templates
 ```
+
+If you go further and look in the generated directories, you'll see that the `
 
 ## Update config.toml with name of current theme
 
