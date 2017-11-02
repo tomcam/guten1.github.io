@@ -140,13 +140,49 @@ generate a simple site:
 $ gutenberg init mywebsite
 ```
 
-* You are asked a short series of questions.
+You are asked a short series of configuration questions. They will be used to generate a human-readable file
+named  `config.toml`. For this quick demo the answers don't matter
+much but here's what they mean.
+First, you're asked what the site's web address (URL) will be. This will be important when
+relative paths to resources in the webbsite are compiled.
 
 ```
 Welcome to Gutenberg!
 
+> What is the URL of your site? (https://example.com):
+```
+
+For now, it doesn't matter much but I'm a stickler and I answer with the local website address preferred by Gutenberg,
+which is 'http://127.0.0.1:1111'. The great thing about `config.toml` is that when you deploy to `yourawesomewebsite.com` changing
+this will be all you need to get those relative paths working properly.
+
+```
 > What is the URL of your site? (https://example.com): http://127.0.0.1:1111
-> Do you want to enable Sass compilation? [Y/n]: y 
+
+```
+
+The next question is about Sass. Sass is a front end to CSS. You create a style sheet called,
+for example, `styles.scss`, and it will run a translation step, then generate a `styles.css` file. 
+This allows you to create much more readable, easy-to-maintain style sheets. For example: 
+
+```
+$font-body-text:    Roboto, Helvetica, sans-serif;
+
+body {
+  font: 100% $font-body-text;
+}
+
+.card-interior {
+  font: 80% $font-body-text;
+}
+```
+
+
+```
+> Do you want to enable Sass compilation? [Y/n]:
+```
+
+
 > Do you want to enable syntax highlighting? [y/N]: y
 
 Done! Your site was created in "/Users/tom/www/mywebsite"
@@ -155,13 +191,32 @@ Done! Your site was created in "/Users/tom/www/mywebsite"
 * Take a look at the contents of the directory that it just created. You've
 created something! Let's see what it looks like.
 
-## XXX Todo: explain these directories
+## What's in your new Gutenberg directory
+
+* If you get a directory listing for new site, you'll find that Gutenberg just did very little for you--a theme is necessary.
 
 ```sh
 $ ls mywebsite
 config.toml	sass		templates
 content		static		themes
 ```
+
+### content directory
+
+The empty content directory is where your articles will go. They are written in Markdown, a simplified format that needs to be combined with HTML templates for visual presentation.
+
+### templates directory
+
+The empty templates directory is where templates like `page.html` and `index.html` will be merged with the content articles.
+
+### static directory
+
+Assets like logo files, icons, fonts, and so forth 
+
+ ### config.toml
+ 
+ The file `config.toml` has many options, only a few of which are included in this auto-generated file.
+ You can see they contained the answers to questions you were asked after running `gutenberg init`.
 
 ## Install a Gutenberg theme
 
@@ -192,11 +247,13 @@ remote: Total 32 (delta 0), reused 0 (delta 0), pack-reused 32
 Unpacking objects: 100% (32/32), done.
 ```
 
-* Now take a look:
+* Now take a look at the `hyde` directory:
 
 ```sh
-$ ls
-hyde
+$ ls hyde
+themes/hyde/
+LICENSE		sass		static		theme.toml
+README.md	screenshot.png	templates
 ```
 
 ## Update config.toml with name of current theme
