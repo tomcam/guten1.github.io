@@ -399,7 +399,7 @@ You'll want another terminal open so you can view files and directory contents.
 # Change these values as needed.
 cd ~/www/mywebsite
 ```
-* Run the server:
+* Run the server with `gutenberg serve`:
 
 ```sh
 $ gutenberg serve
