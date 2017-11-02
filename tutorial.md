@@ -230,24 +230,24 @@ config.toml	sass		templates
 content		static		themes
 ```
 
-### content directory
+### `/content` directory
 
-The empty content directory is where your articles will go. They are written in Markdown, a simplified format that needs to be combined with HTML templates for visual presentation.
+The empty `/content` directory is where your articles will go. They are written in Markdown, a simplified format that needs to be combined with HTML templates for visual presentation.
 
-### templates directory
+### `/templates` directory
 
-The empty templates directory is where templates like `page.html` and `index.html` will be merged with the content articles
+The empty `/templates` directory is where templates like `page.html` and `index.html` will be merged with the content articles
 to yield formatted content. The appearance can be vastly different depending on how themes are created.
 
-### static directory
+### `/static1 directory
 
 Assets like logo files, CSS icons, fonts, and so forth usually go in the `static` directory.
 
-### sass directory
+### `/sass` directory
 
 The `.scss` files used by Sass to generate CSS files go here.
 
- ### config.toml
+ ### `/config.toml` file
  
  The file `config.toml` has many options, only a few of which are included in this auto-generated file.
  You can see they contained the answers to questions you were asked after running `gutenberg init`:
@@ -305,14 +305,14 @@ If you go further and look in the generated directories, you'll see that they re
 website's root directory. This time they are populated with template files such as `index.html` and `page.html`,
 Sass source files, and a `screenshot.png` file showing an example home page made using the Hyde theme.
 
-### No content directory?
+### No `/content` directory?
 
 The main difference between the contents of this theme directory and the site's root directory is 
 the lack of a `/content` directory. That's because your site is skinnable using themes. Your site can use
 multiple themes. Only one is active at a time, but they all draw from the `/content` directory for the 
 site's editorial material.
 
-## Update config.toml with name of current theme
+## Update `/config.toml` with name of current theme
 
 Now you need to specify to Gutenberg what theme is being used (because you could put other
 themes in the `/themes` directory).
