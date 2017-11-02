@@ -192,7 +192,7 @@ body {
 }
 ```
 
-Most environments require you to download Sass separately, but one of the niftiest features of Gutenberg is that it does all this internally, for the low low price of the gutenberg executable itself.
+Most environments require you to download Sass separately, but one of the niftiest features of Gutenberg is that it does all this internally by duplicating the feature set of Sass without requring that you install Sass itself.
 
 Note that the possible answers are in mixed case, in this case `Y` and `n`. This means that presing Enter is the same as 
 selecting whatever the uppercase option was.
