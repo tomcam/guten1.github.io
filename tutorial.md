@@ -239,7 +239,7 @@ The empty `/content` directory is where your articles will go. They are written 
 The empty `/templates` directory is where templates like `page.html` and `index.html` will be merged with the content articles
 to yield formatted content. The appearance can be vastly different depending on how themes are created.
 
-### `/static1 directory
+### `/static` directory
 
 Assets like logo files, CSS icons, fonts, and so forth usually go in the `static` directory.
 
