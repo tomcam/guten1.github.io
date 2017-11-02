@@ -377,7 +377,7 @@ with the markup files, and the output is pure HTML files the browser can underst
 ```sh
 $ gutenberg build
 Building site...
--> Creating 0 pages (0 orphan) and 0 sections
+-> Creating 1 pages (0 orphan) and 0 sections
 Done in 22ms.
 ```
 
@@ -435,8 +435,11 @@ it was built line by line.
 
 ```
 
-## TODO
+# Reference
 
-* Rebuild if necessary
-
+* Gutenberg [website](https://www.getgutenberg.io/)
+* Gutenberg on [Github](https://github.com/Keats/gutenberg)
+* Creating a Gutenberg [theme](https://www.getgutenberg.io/documentation/themes/creating-a-theme/)
+* [Learn Sass](http://sass-lang.com/guide)
+* The CommonMark [Markdown standard](http://commonmark.org/), ((Quick reference))[http://commonmark.org/help/], [10 minute tutorial](http://commonmark.org/help/tutorial/)
 
