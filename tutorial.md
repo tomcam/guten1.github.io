@@ -433,11 +433,6 @@ the title of the article is showing.
 
 [The full article](images/gutenberg-hyde-theme-first-article.png)
 
-## TODO
-
-* maybe show directory tree with eqch new piece of content 
-* Mention that articles using page.html template need particular front matter and that filename doesn't matter
-
 ## Add a second page
 
 To understand how the Hyde theme works, add a second article.
@@ -458,6 +453,27 @@ of being used in production. This tutorial shows how
 it was built line by line.
 
 ```
+
+Run `gutenberg build` because there's a new page on the site:
+
+```sh
+$ gutenberg build
+Building site...
+-> Creating 2 pages (0 orphan) and 0 sections
+Done in 62ms.
+```
+
+Note how the message when from `Creating 1 page` to `Creating 2 pages`.
+
+The server is still running and the home page is updated automatically:
+
+[Updated homepage using Hyde theme](images/gutenberg-hyde-theme-second-article.png)
+
+## TODO
+
+* maybe show directory tree with eqch new piece of content 
+* Mention that articles using page.html template need particular front matter and that filename doesn't matter
+
 
 # Reference
 
