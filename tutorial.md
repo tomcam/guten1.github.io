@@ -379,6 +379,14 @@ on for your next custom Gutenberg theme.
 Now it's time to convert the site's stub .md files to HTML. Gutenberg combines HTML templates
 with the markup files, and the output is pure HTML files the browser can understand.
 
+* Return to the site's root directory:
+
+```sh
+cd ~/www/mywebsite
+```
+
+And run `gutenberg build` like so:
+
 ```sh
 $ gutenberg build
 Building site...
