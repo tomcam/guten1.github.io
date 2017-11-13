@@ -96,7 +96,10 @@ for you to create Gutenberg themes.
 
 At the time of writing, Gutenberg lacks installers for most operating systems but that barely matters. It consists of a single executable file you run from the command line.
 
-* Follow the download instructions at www.getgutenberg.io
+* Browse to www.getgutenberg.io,  click `GET STARTED` and follow the download instructions.
+
+This places the Gutenberg executable in your download directory.
+
 * Copy the executable to a location on the path. For example, on Macs and many Linux variations the following would work:
 
 ```sh
@@ -166,7 +169,7 @@ which is `http://127.0.0.1:1111`. The great thing about `config.toml` is that wh
 
 ```
 
-For example, you'll see constructions like this:
+For example, in Gutenberg templates you'll see constructions like this embedded in the template's HTML:
 
 ```
 <link rel="stylesheet" href="{{ get_url(path="hyde.css") }}">
@@ -192,7 +195,7 @@ body {
 }
 ```
 
-Most environments require you to download Sass separately, but one of the niftiest features of Gutenberg is that it does all this internally by duplicating the feature set of Sass without requring that you install Sass itself.
+Most environments require you to download Sass separately, but one of the niftiest features of Gutenberg is that it does all this internally by duplicating the feature set of Sass without requiring that you install Sass itself.
 
 Note that the possible answers are in mixed case, in this case `Y` and `n`. This means that presing Enter is the same as 
 selecting whatever the uppercase option was.
