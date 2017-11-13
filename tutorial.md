@@ -343,21 +343,23 @@ theme = "hyde"
 # Put all your custom variables here
 ```
 
-## Add a page
+## Add a page to the `/content` directory
 
-The site is empty right now. It needs some content. We'll write an article using markdown. Normally a markdown document looks something like this (but it's insufficient for Gutenberg).
+The site is empty right now. It needs a blog post. 
 
-```
-# This will become an H1 header.
+* Return to the site's `/content` directory.
 
-Just add an extra pound sign for each header level. For example:
-
-## Render me as an H2 header.
-
-And this becomes a standard paragraph.
+```sh
+cd ~/www/mywebsite/content
 ```
 
-Let's create a short article for the new site. Call it `article.md` and save it in /content:
+### Write the blog post using Markdown syntax
+
+We'll write a blog post using markdown. 
+
+* Write this article using a text editor.
+
+* Call it `article.md` and save it in /content:
 
 ```
 +++ 
