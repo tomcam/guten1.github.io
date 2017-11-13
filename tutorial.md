@@ -422,6 +422,8 @@ Web server is available at http://127.0.0.1:1111
 
 * To view your handywork, open a browser and copy in the address `http://127.0.0.1:1111`:
 
+[Gutenberg Home Page using Hyde theme](gutenberg-home-page-hyde-theme.png)
+
 ## TODO
 
 * maybe show directory tree with eqch new piece of content 
