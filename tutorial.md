@@ -422,7 +422,16 @@ Web server is available at http://127.0.0.1:1111
 
 * To view your handywork, open a browser and copy in the address `http://127.0.0.1:1111`:
 
-[Gutenberg Home Page using Hyde theme](articles/gutenberg-home-page-hyde-theme.png)
+[Gutenberg Home Page using Hyde theme](images/gutenberg-home-page-hyde-theme.png)
+
+### Visit the blog post
+
+The Hyde theme automatically lists articles found in the content directory on its home page. As you can see, only
+the title of the article is showing. 
+
+* Click the blog title, and you'll see the full post rendered on a new page:
+
+[The full article](images/gutenberg-hyde-theme-first-article.png)
 
 ## TODO
 
