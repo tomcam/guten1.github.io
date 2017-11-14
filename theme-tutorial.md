@@ -129,6 +129,18 @@ a fairly minimalist theme for the Gutenberg
 static site generator.
 ```
 
+### Regenerate the site with `gutenberg build`
+
+Since fundamental files have changed, you need to regenerate the site. 
+
+```bash
+$ gutenberg build
+```
+
+Now take a look at the results in your browser:
+
+(images/gutenberg-starter-theme-step1.png)
+
 
 ## The theme explained
 
