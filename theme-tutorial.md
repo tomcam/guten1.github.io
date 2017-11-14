@@ -98,12 +98,32 @@ $ vim index.html
 </html>
 ```
 
+### Create the article file `_index.md`
+
+* Create the following text file and name it `_index.md`:
+
+
+```
++++
+title = "The Starter theme for Gutenberg"
+template = "index.html"
+date = "2017-12-11"
++++
+
+# A simple Gutenberg theme called Starter
+
+[Starter](https://github.com/tomcam/gutenberg-starter) is 
+a fairly minimalist theme for the Gutenberg 
+static site generator.
+```
+
+
 ## The theme explained
 
 You have probably guessed that constructs such as '{{ config.title }}` represent values that get replaced
 when the published HTML is generated from an HTML template and the Markdown source file.
 
-'{{ config.title }}` gets replaced with the specified by the `title` line in `config.toml':
+`{{ config.title }}` gets replaced with the specified by the `title` line in `config.toml`:
 
 ### file `themename/config.toml`:
 
