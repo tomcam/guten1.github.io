@@ -50,21 +50,52 @@ name = "Tom Campbell"
 homepage = "https://tom.im"
 ```
 
+### Create a `/themename/static` directory
+
+Even if it's not used, your theme is expected to have a /static directory.
+
+* Create a directory named `/themename/static`:
+
+```bash
+$ mkdir static
+```
+
 ### Create an index.html template in the /themename/templates directory
 
 All themes require a file in the `/themename/templates` subdirectory named `index.html`. (Obviously
 replace `/themename` with whatever you've named your theme.)
 
-* Create a directory named `\templates` under the directory you've created for your theme.
+* Create a directory named `/templates` under the directory you've created for your theme.
 
 ```bash
 $ mkdir templates
 ```
 
-* Underneath it create the file `index.html` and populate it as follows:
+* Underneath it create the file `index.html`
 
 ```bash
 $ vim index.html
+```
+
+* Populate the `index.html` template as follows and save it:
+
+```html
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+        <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css" />
+    </head>
+    <body>
+    	{% block content %}
+    		{{ section.content | safe }}
+    	{% endblock content %}
+    </body>
+</html>
 ```
 
 
