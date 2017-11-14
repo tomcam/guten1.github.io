@@ -37,17 +37,29 @@ $ touch theme.toml
 * Populate your `theme.toml` file with configuration info. Note that lines starting with `#` are comments.
 
 ```
+# Name of the theme itself
 name = "starter"
-description = "A minimal Gutenberg theme with a typical feature set"
-license = "MIT"
-homepage = "https://github.com/tomcam/gutenberg-starter"
-min_version = "0.2"
 
-[extra]
+# Executive summary for directories of themes
+description = "A minimal Gutenberg theme with a typical feature set"
+
+# MIT is the obvious license because Gutenberg uses it
+license = "MIT"
+
+# Where to find this theme's source
+homepage = "https://github.com/tomcam/gutenberg-starter"
+
+# Minimum version of Gutenberg required for this theme
+min_version = "0.2.2"
 
 [author]
+
+# Creater of original theme
 name = "Tom Campbell"
+
+# Homepage of the theme creator (not the theme itself)
 homepage = "https://tom.im"
+
 ```
 
 ### Create a `/themename/static` directory
