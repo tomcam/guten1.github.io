@@ -98,7 +98,7 @@ $ vim index.html
         <meta charset="UTF-8">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+        <meta name="description" content="{{ config.description }}">
         <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css" />
     </head>
