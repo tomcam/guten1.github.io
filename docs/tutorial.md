@@ -422,7 +422,8 @@ Web server is available at http://127.0.0.1:1111
 
 * To view your handywork, open a browser and copy in the address `http://127.0.0.1:1111`:
 
-[Gutenberg Home Page using Hyde theme](images/gutenberg-home-page-hyde-theme.png)
+
+![Gutenberg Home Page using Hyde theme](images/gutenberg-home-page-hyde-theme.png)
 
 ### Visit the blog post
 
@@ -431,7 +432,7 @@ the title of the article is showing.
 
 * Click the blog title, and you'll see the full post rendered on a new page:
 
-[The full article](images/gutenberg-hyde-theme-first-article.png)
+![The full article](images/gutenberg-hyde-theme-first-article.png)
 
 ## Add a second page
 
@@ -467,7 +468,7 @@ Note how the message when from `Creating 1 page` to `Creating 2 pages`.
 
 The server is still running and the home page is updated automatically:
 
-[Updated homepage using Hyde theme](images/gutenberg-hyde-theme-second-article.png)
+![Updated homepage using Hyde theme](images/gutenberg-hyde-theme-second-article.png)
 
 ## TODO
 
