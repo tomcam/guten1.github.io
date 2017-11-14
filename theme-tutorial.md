@@ -139,7 +139,7 @@ $ gutenberg build
 
 Now take a look at the results in your browser:
 
-!(images/gutenberg-starter-theme-step1.png)
+![Stripped down index.html home page](images/gutenberg-starter-theme-step1.png)
 
 
 ## The theme explained
