@@ -12,12 +12,15 @@ $ cd ~/www
 
 ### Create a subdirectory under `/themes` using your new theme name
 
-* Create a directory for your customer them in the `/themes` directory.
+* Create a directory for your customer them in the `/themes` directory and move into it.
 
 ```
 # Whereever you see starter, replace it with the
 # name of your own theme.
 $ mkdir themes/starter
+
+# Make it the current direcdtory
+$ cd themes/starter
 
 ```
 
@@ -28,7 +31,7 @@ $ mkdir themes/starter
 ```
 # Create a new file. This could be done just as easily
 # with an editor, for example, vim themes/starter/theme.toml
-$ touch themes/starter/theme.toml
+$ touch theme.toml
 ```
 
 * Populate your `theme.toml` file with configuration info. Note that lines starting with `#` are comments.
@@ -45,6 +48,23 @@ min_version = "0.2"
 [author]
 name = "Tom Campbell"
 homepage = "https://tom.im"
+```
+
+### Create an index.html template in the /themename/templates directory
+
+All themes require a file in the `/themename/templates` subdirectory named `index.html`. (Obviously
+replace `/themename` with whatever you've named your theme.)
+
+* Create a directory named `\templates` under the directory you've created for your theme.
+
+```bash
+$ mkdir templates
+```
+
+* Underneath it create the file `index.html` and populate it as follows:
+
+```bash
+$ vim index.html
 ```
 
 
