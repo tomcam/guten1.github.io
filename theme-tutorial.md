@@ -98,6 +98,20 @@ $ vim index.html
 </html>
 ```
 
+## The theme explained
+
+You have probably guessed that constructs such as '{{ config.title }}` represent values that get replaced
+when the published HTML is generated from an HTML template and the Markdown source file.
+
+'{{ config.title }}` gets replaced with the specified by the `title` line in `config.toml':
+
+### file `themename/config.toml`:
+
+```
+# Appears on browser tabs & often in search results 
+title = "Simple starter template"
+```
+
 
 # Todo
 
