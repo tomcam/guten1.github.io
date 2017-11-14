@@ -464,7 +464,7 @@ Building site...
 Done in 62ms.
 ```
 
-Note how the message when from `Creating 1 page` to `Creating 2 pages`.
+Note how the message went from `Creating 1 page` to `Creating 2 pages`.
 
 The server is still running and the home page is updated automatically:
 
