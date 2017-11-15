@@ -1,0 +1,2 @@
+Placeholder because GitHub won't allow empty directory,
+and Gutenberg requires a directory there (but it can be empty)
