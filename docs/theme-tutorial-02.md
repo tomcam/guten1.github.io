@@ -79,6 +79,15 @@ Create the template file section.html:
 <title>Starter theme</title>
 ```
 
+Create the article content/news/_index.md
+
+```
++++
+title = "News section"
+sort_by = "date"
++++
+```
+
 Create the article content/news/page1.md
 
 ```
