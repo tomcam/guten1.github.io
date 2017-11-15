@@ -9,7 +9,7 @@
 </head>
 <body>
 	<p><a href="{{ get_url(path="./_index.md") }}" class="button">Home</a></p>
-    <h4>{{ page.date | date(format="%Y-%m-%d") }}</h4>
+	<h4>{{ page.date | date(format="%Y-%m-%d") }}</h4>
 	{{ page.content | safe }}
 	<p>Word count: {{ page.word_count }}</p>
   	<p><a href="{{ page.permalink }}">Permalink</a></p>
