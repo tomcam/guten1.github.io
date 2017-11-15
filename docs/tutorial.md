@@ -367,7 +367,7 @@ title = "Announcing the Starter theme"
 template = "page.html" 
 date = "2017-12-01" 
 +++ 
-# New Gutenberg theme named Starter announced
+# New Gutenberg theme released
 
 A new, ultra-simplified Gutenberg theme named `Starter` has been 
 added to the gallery. It's a minimalist theme you can build
