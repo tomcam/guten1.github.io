@@ -1,6 +1,5 @@
 # How to write a Gutenberg theme
 
-## 
 
 * Go to your Gutenberg home directory. Here the home directory is in `~/www/` but there is no reason, convention or otherwise, 
 that you need to use the same directory.
@@ -12,7 +11,7 @@ $ cd ~/www
 
 ### Create a subdirectory under `/themes` using your new theme name
 
-* Create a directory for your customer them in the `/themes` directory and move into it.
+* Create a directory for your custom theme in the `/themes` directory and move into it.
 
 ```
 # Whereever you see starter, replace it with the
