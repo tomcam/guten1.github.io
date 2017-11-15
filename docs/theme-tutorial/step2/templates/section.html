@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+        <title>{{ config.title }}</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css" />
+		<style>
+		
+</style>		
+    </head>
+    <body>
+    	{% block content %}
+    		{{ section.content | safe }}
+    	{% endblock content %}
+    </body>
+</html>
