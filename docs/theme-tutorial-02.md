@@ -18,10 +18,38 @@ home page when you rebuild.
 # name of your own theme.
 # The -p option lets you create subdirectories nested to
 # any depth.
-$ mkdir -p ~/www/themes/step2-starter/templates
+$ mkdir -p ~/www/themes/step2-starter
 
 # Make it the current direcdtory
-$ cd ~/www/themes/step2-starter/templates
+$ cd ~/www/themes/step2-starter
+
+```
+
+Copy the previous `theme.toml`, changing only its `name`, and place in the `step2-starter` theme directory:
+
+```
+# Name of the theme itself
+name = "step2-starter"
+
+# Executive summary for directories of themes
+description = "A minimal Gutenberg theme with a typical feature set"
+
+# MIT is the obvious license because Gutenberg uses it
+license = "MIT"
+
+# Where to find this theme's source
+homepage = "https://github.com/tomcam/gutenberg-starter"
+
+# Minimum version of Gutenberg required for this theme
+min_version = "0.2.2"
+
+[author]
+
+# Creater of original theme
+name = "Tom Campbell"
+
+# Homepage of the theme creator (not the theme itself)
+homepage = "https://tom.im"
 
 ```
 
