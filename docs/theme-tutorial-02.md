@@ -1,3 +1,7 @@
+[Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 2](theme-tutorial-02.md)
+
+
+
 # Adding a news section
 
 # TODO: Lots of explanatory material.
@@ -230,3 +234,5 @@ date="2017-12-03"
 Who doesn't love page 3?
 
 ```
+
+[Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 2](theme-tutorial-02.md)
