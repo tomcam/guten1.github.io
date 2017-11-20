@@ -1,4 +1,4 @@
-[Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 1](theme-tutorial-02.md)
+[Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 2](theme-tutorial-02.md)
 
 
 # How to write a Gutenberg theme
@@ -267,5 +267,5 @@ title = "Simple starter template"
 * Do a lesson on an anonymous theme
 * Find out the correct term for what I call an anonymous theme
 
-[Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 1](theme-tutorial-02.md)
+[Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 2](theme-tutorial-02.md)
 
