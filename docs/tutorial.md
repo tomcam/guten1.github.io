@@ -1,3 +1,5 @@
+[Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 2](theme-tutorial-02.md)
+
 # Gutenberg Tutorial: Using the Gutenberg static website generator
 
 [Gutenberg](https://getgutenberg.io) lets you create high-performance websites quickly. 
@@ -484,3 +486,5 @@ The server is still running and the home page is updated automatically:
 * [Learn Sass](http://sass-lang.com/guide)
 * The CommonMark [Markdown standard](http://commonmark.org/), ((Quick reference))[http://commonmark.org/help/], [10 minute tutorial](http://commonmark.org/help/tutorial/)
 
+
+[Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 2](theme-tutorial-02.md)
