@@ -1,3 +1,6 @@
+[Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 1](theme-tutorial-02.md)
+
+
 # How to write a Gutenberg theme
 
 This first step shows you how to write the simplest possible Gutenberg theme: it is for a site with only one page. If that seems too reductive, keep in mind that many new sites start out with a simple home page designed to get people interested in coming events or products.
@@ -258,9 +261,11 @@ when the published HTML is generated from an HTML template and the Markdown sour
 title = "Simple starter template"
 ```
 
-
 # Todo
 
 * Finish "The theme explained"
 * Do a lesson on an anonymous theme
 * Find out the correct term for what I call an anonymous theme
+
+[Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 1](theme-tutorial-02.md)
+
