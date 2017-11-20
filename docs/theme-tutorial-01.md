@@ -29,11 +29,41 @@ At the end of this section you'll have a site that looks like this:
 
 ```
 
-`public` directory
-: The `public` directory is generated automatically
+`/config.toml` file
+: Overall configuration for your Gutenberg-generated website, including the active theme
 
-`themes` directory
-: The `themes` directory can contain multiple themes. `config.toml` controls which theme is currently in use
+`/public` directory
+: Most HTML files in the `public` directory are generated automatically by combining articles 
+written in Markdown format in the `/content` directory and HTML files in the theme's `templates`
+directory
+
+`/static` directory
+: Contains assets such as graphics files, fonts, or style sheets used by the site as a whole. Unused in this example.
+
+`/themes` directory
+: The `themes` directory can contain multiple themes. `config.toml` controls which theme is currently in use. Each directory immediately underneath is the name of a theme, and is the name used by `config.toml` to load the active theme. The only theme in this example is named `starter`.
+
+`/themes/themename/theme.toml` file
+: Each theme requires a `theme.toml` file with information about that theme, all of which is accessible at runtime and assists consumers of the theme. For example, the `homepage` item tells where the home page originated, and can be used in theme directories.
+
+`/themes/themename/templates` directory
+: The theme's `/templates` directory contains HTML files that include special values known to Gutenberg. They provide formatting when the Markdown `.md` source files are converted into plain HTML for rendering. While this
+example is the smallest possible theme and provides only a single home page (`index.html`), it's common to have at least one more template type called `page.html` to format blog posts or news articles. You can use as many different kinds of template files as you wish. (Replace `themename` in the example above with the name of a particular theme, like `hugo` or `starter`.)
+
+`/themes/themename/static` directory
+: Contains assets such as graphics files, fonts, or style sheets used solely by this theme. Unused in this example. (Replace `themename` in the example above with the name of a particular theme, like `hugo` or `starter`.)
+
+`/content` directory
+: Contains the Markdown `.md` source files with the actual text content of the site. They are converted into plain HTML for rendering in combination with associated template files files from the `/themes/themename/templates` directory. Each Markdown or `.md` file has front matter specifying which HTML template would be used for this file. In this example, `_index.md` has the line `template = "index.html"` in its front matter. (Replace `themename` in the example above with the name of a particular theme, like `hugo` or `starter`.)
+
+In a production site with more than one page the content would have many, many more files, with names like `12-17-2018.md', and they would probably be arranged into subdirectories. This would result in URLS like `example.com/blog/12-17-2018.md` or `example.com/staff/jared/profile.md`
+
+`/sass` directory
+: For [Sass](http://sass-lang.com/) CSS source files. For the case where the site has an unnamed anonymous theme. Unused in this example.
+
+`/templates` directory
+: Same as the `/themes/themename/static` directory. For the case where the site has an unnamed anonymous theme. Unused in this example.
+
 
 ## Building the theme
 
