@@ -124,24 +124,26 @@ Template files add HTML formatting to the textual contenet in the Markdown (`.md
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ config.description }}">
     <title>{{ config.title }}</title>
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre
 </head>
 <body>
     <div class="container">
         <div class="columns">
             <div class="col-9">
-                {{ section.content | safe }}
+                {% block content %}
+                    {{ section.content | safe }}
+                {% endblock content %}
             </div><!-- .col-9 -->
             <div class="col-3">
                 <h1>News</h1>
                 {% set section = get_section(path="news/_index.md") %}
                 {% for page in section.pages %}
                     <h4>{{ page.date }}</h4>
-                    <h3><a href="{{ page.permalink }}">{{ page.title | safe }}</a><h3>
+                    <h3><a href="{{ page.permalink }}">{{ page.title | safe }}<
                 {% endfor %}
             </div><!-- col-3 -->
         </div><!-- columns -->
-        </div><!-- .container -->
+    </div><!-- .container -->
 </body>
 </html>
 ```
