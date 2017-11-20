@@ -110,7 +110,7 @@ Template files add HTML formatting to the textual contenet in the Markdown (`.md
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ config.description }}">
     <title>{{ config.title }}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.mi
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css" />
 </head>
 <body>
     <div class="container">
@@ -142,7 +142,7 @@ Template files add HTML formatting to the textual contenet in the Markdown (`.md
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ config.description }}">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css" />
 </head>
 <body>
     <h4>{{ page.date | date(format="%Y-%m-%d") }}</h4>
