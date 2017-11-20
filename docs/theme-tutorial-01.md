@@ -44,22 +44,22 @@ Contains assets such as graphics files, fonts, or style sheets used by the site 
 
 The `themes` directory can contain multiple themes. `config.toml` controls which theme is currently in use. Each directory immediately underneath is the name of a theme, and is the name used by `config.toml` to load the active theme. The only theme in this example is named `step1-starter`.
 
-### `/themes/themename/theme.toml` file
+### `/themes/step1-starter/theme.toml` file
 
 Each theme requires a `theme.toml` file with information about that theme, all of which is accessible at runtime and assists consumers of the theme. For example, the `homepage` item tells where the home page originated, and can be used in theme directories.
 
-### `/themes/themename/templates` directory
+### `/themes/step1-starter/templates` directory
 
 The theme's `/templates` directory contains HTML files that include special values known to Gutenberg. They provide formatting when the Markdown `.md` source files are converted into plain HTML for rendering. While this
 example is the smallest possible theme and provides only a single home page (`index.html`), it's common to have at least one more template type called `page.html` to format blog posts or news articles. You can use as many different kinds of template files as you wish. (Replace `step1-starter` in the example above with the name of a particular theme, like `hugo` or `starter`.)
 
-### `/themes/themename/static` directory
+### `/themes/step1-starter/static` directory
 
 Contains assets such as graphics files, fonts, or style sheets used solely by this theme. Unused in this example.  (Replace `step1-starter` in the example above with the name of a particular theme, like `hugo` or `starter`.)
 
 ### `/content` directory
 
-Contains the Markdown `.md` source files with the actual text content of the site. They are converted into plain HTML for rendering in combination with associated template files files from the `/themes/themename/templates` directory. Each Markdown or `.md` file has front matter specifying which HTML template would be used for this file. In this example, `_index.md` has the line `template = "index.html"` in its front matter. ( (Replace `step1-starter` in the example above with the name of a particular theme, like `hugo` or `starter`.)
+Contains the Markdown `.md` source files with the actual text content of the site. They are converted into plain HTML for rendering in combination with associated template files files from the `/themes/step1-starter/templates` directory. Each Markdown or `.md` file has front matter specifying which HTML template would be used for this file. In this example, `_index.md` has the line `template = "index.html"` in its front matter. ( (Replace `step1-starter` in the example above with the name of a particular theme, like `hugo` or `starter`.)
 
 In a production site with more than one page the content would have many, many more files, with names like `12-17-2018.md', and they would probably be arranged into subdirectories. This would result in URLS like `example.com/blog/12-17-2018.md` or `example.com/staff/jared/profile.md`
 
@@ -69,7 +69,7 @@ For [Sass](http://sass-lang.com/) CSS source files. For the case where the site 
 
 ### `/templates` directory
 
-Same as the `/themes/themename/static` directory. For the case where the site has an unnamed anonymous theme. Unused in this example.
+Same as the `/themes/step1-starter/static` directory. For the case where the site has an unnamed anonymous theme. Unused in this example.
 
 
 ## Building the theme
@@ -109,7 +109,7 @@ $ cd themes/step1-starter
 
 ```
 
-### Create the file /themename/theme.toml
+### Create the file /step1-starter/theme.toml
 
 * Create an empty TOML file for this theme named `theme.toml`
 and add these contents. Note that lines starting with `#` are comments.
@@ -140,20 +140,20 @@ homepage = "https://tom.im"
 
 ```
 
-### Create a `/themename/static` directory
+### Create a `/step1-starter/static` directory
 
 Even if though it's not used in this example, your theme is expected to have a /static directory.
 
-* Create a directory named `/themename/static`:
+* Create a directory named `/step1-starter/static`:
 
 ```bash
 $ mkdir static
 ```
 
-### Create /themename/templates/index.html file
+### Create /step1-starter/templates/index.html file
 
-All themes require a file in the `/themename/templates` subdirectory named `index.html`. (Obviously
-replace `/themename` with whatever you've named your theme.)
+All themes require a file in the `/step1-starter/templates` subdirectory named `index.html`. (Obviously
+replace `/step1-starter` with whatever you've named your theme.)
 
 * Create a directory named `/templates` under the directory you've created for your theme.
 
@@ -251,7 +251,7 @@ when the published HTML is generated from an HTML template and the Markdown sour
 
 `{{ config.title }}` gets replaced with the specified by the `title` line in `config.toml`:
 
-### file `themename/config.toml`:
+### file `step1-starter/config.toml`:
 
 ```
 # Appears on browser tabs & often in search results 
