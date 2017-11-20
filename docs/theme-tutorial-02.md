@@ -50,7 +50,7 @@ At the end of this section you'll have a site that looks like this:
 │       ├── _index.md
 │       ├── page1.md
 │       ├── page2.md
-│       └── page1.md
+│       └── page3.md
 ├── sass/
 └── templates/
 
