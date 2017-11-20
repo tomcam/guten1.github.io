@@ -40,12 +40,12 @@ At the end of this section you'll have a site that looks like this:
 The theme built in this tutorial looks like this:
 
 ```
-├── themes/
-    └── starter
-        ├── theme.toml
-        ├── templates
-        │   └── index.html
-        └── static/
+themes/
+└── starter/
+    ├── theme.toml
+    ├── templates/
+    │   └── index.html
+    └── static/
 ```
 
 The `static` directory must be included although it's not used in this example.
