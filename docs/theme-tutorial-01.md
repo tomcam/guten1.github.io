@@ -146,6 +146,31 @@ a fairly minimalist theme for the Gutenberg
 static site generator.
 ```
 
+## Update `config.toml` with the name of the new theme
+
+The theme is done. Now let Gutenberg know it should be put to use.
+
+* Return to the main Gutenberg directory (not a theme directory). 
+In this example, you'd do the following:
+
+```bash
+# Change this to the base Gutenberg page for your
+# installation.
+$ cd ~/www/starter
+```
+
+* Fire up you favorite editor and put this anywhere above the `[extra]` line:
+
+```
+# Replace with the name of your theme
+theme = "starter"
+
+[extra]
+```
+
+* Update the `theme=` portion of `config.toml` with the name of the theme:
+
+
 ### Regenerate the site with `gutenberg build`
 
 Since fundamental files have changed, you need to regenerate the site. 
