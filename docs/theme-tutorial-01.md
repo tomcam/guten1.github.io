@@ -1,5 +1,54 @@
 # How to write a Gutenberg theme
 
+This first step shows you how to write a complete Gutenberg theme for a site that
+has only one page: the home page.
+
+## What's in the Gutenberg directory structure
+
+### TODO: Full directory structure probably belongs in another section
+
+At the end of this section you'll have a site that looks like this:
+
+```
+┌── config.toml
+├── public/
+│   ├── index.html
+│   ├── robots.txt
+│   └── sitemap.xml
+├── static/
+├── themes/
+│   └── starter/
+│       ├── theme.toml
+│       ├── templates/
+│       │   └── index.html
+│       └── static/
+├── content/
+│   └── _index.md
+├── sass/
+└── templates/
+
+```
+
+`public` directory
+: The `public` directory is generated automatically
+
+`themes` directory
+: The `themes` directory can contain multiple themes. `config.toml` controls which theme is currently in use
+
+## Building the theme
+
+The theme built in this tutorial looks like this:
+
+```
+├── themes/
+    └── starter
+        ├── theme.toml
+        ├── templates
+        │   └── index.html
+        └── static/
+```
+
+The `static` directory must be included although it's not used in this example.
 
 * Go to your Gutenberg home directory. Here the home directory is in `~/www/` but there is no reason, convention or otherwise, 
 that you need to use the same directory.
