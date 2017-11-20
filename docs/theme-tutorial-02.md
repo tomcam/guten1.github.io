@@ -72,6 +72,12 @@ $ mkdir -p ~/www/themes/step2-starter
 # Make it the current direcdtory
 $ cd ~/www/themes/step2-starter
 
+# Create this theme's (so far unused) `/static` directory
+$ mkdir static
+
+# Create this theme's `/templates` directory
+$ mkdir templates
+
 ```
 
 ## Create the file /themename/theme.toml
@@ -140,6 +146,23 @@ Template files add HTML formatting to the textual contenet in the Markdown (`.md
 </html>
 ```
 
+### Create the page template file `/themename/templates/simple.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre
+</head>
+<body>
+    {{ page.content | safe }}
+</body>
+</html>
+```
+                                 
 ### Create the page template file `/themename/templates/page.html`
 
 ```html
@@ -182,6 +205,23 @@ The titles of the articles are also arbitrary, but they will become part of the 
 Here we'll create the `/news` section and three sample articles.
 
 ### TODO: Finish explanation
+
+## Create the `content/about.md` page
+
+We're going to create another static page on the site. It's considered good form (and good search engine mojo) to have a number of standard pages on your site such as About, Contact, Terms of Service, and so on. These pages would formatted minimally using the `simple.html` template. We'll have one such example page, About.
+
+```
++++
+title = "About"
+template = "simple.html"
++++
+
+# About this site
+
+This a fine site
+
+Go [home](/)
+```
 
 ### Create the article `content/news/_index.md`
 
