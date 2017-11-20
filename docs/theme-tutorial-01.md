@@ -167,14 +167,14 @@ $ mkdir templates
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ config.description }}">
-    <title>{{ config.title }}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ config.description }}">
+	<title>{{ config.title }}</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css" />
 </head>
 <body>
-    {{ section.content | safe }}
+	{{ section.content | safe }}
  </body>
 </html>
 
