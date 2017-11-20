@@ -82,6 +82,11 @@ replace `/themename` with whatever you've named your theme.)
 $ mkdir templates
 ```
 
+* Change to that directory.
+
+```bash
+$ cd templates
+```
 * Underneath it create the file `index.html`
 
 ```bash
@@ -106,10 +111,26 @@ $ vim index.html
 </html>
 ```
 
-### Create the article file `_index.md`
+### Create the home file `_index.md` and put it in the /content directory
+
+* Return to the root of your project directory.
+
+* For example, visit ~/www/starter/content or type this:
+
+```bash
+$ cd ../content
+```
 
 * Create the following text file and name it `_index.md`:
 
+```bash
+# Path isn't strictly necessary here because you should be
+# in the /content directory, but this helps you remember
+# the intended directory structure.
+$ vim ~/www/starter/content/ _index.md
+```
+
+* Give it these contents:
 
 ```
 +++
@@ -132,6 +153,13 @@ Since fundamental files have changed, you need to regenerate the site.
 ```bash
 $ gutenberg build
 ```
+
+### Run the server if necessary
+
+```bash
+$ gutenberg serve
+```
+
 
 Now take a look at the results in your browser:
 
