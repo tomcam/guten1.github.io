@@ -95,16 +95,13 @@ $ vim index.html
 <html lang="en-gb">
     <head>
         <meta charset="UTF-8">
-        <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{{ config.description }}">
-        <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+        <title>{{ config.title }}</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css" />
     </head>
     <body>
-    	{% block content %}
-    		{{ section.content | safe }}
-    	{% endblock content %}
+    	{{ section.content | safe }}
     </body>
 </html>
 ```
