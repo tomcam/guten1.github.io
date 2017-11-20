@@ -28,9 +28,8 @@ $ cd themes/starter
 * Create an empty TOML file for this theme named `theme.toml`.
 
 ```
-# Create a new file. This could be done just as easily
-# with an editor, for example, vim themes/starter/theme.toml
-$ touch theme.toml
+# Create a new file. 
+$ vim theme.toml
 ```
 
 * Populate your `theme.toml` file with configuration info. Note that lines starting with `#` are comments.
@@ -96,19 +95,7 @@ $ vim index.html
 * Populate the `index.html` template as follows and save it:
 
 ```html
-<!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="{{ config.description }}">
-        <title>{{ config.title }}</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css" />
-    </head>
-    <body>
-    	{{ section.content | safe }}
-    </body>
-</html>
+ls
 ```
 
 ### Create the home file `_index.md` and put it in the /content directory
@@ -156,6 +143,7 @@ In this example, you'd do the following:
 ```bash
 # Change this to the base Gutenberg page for your
 # installation.
+# cd ..  # OR...
 $ cd ~/www/starter
 ```
 
