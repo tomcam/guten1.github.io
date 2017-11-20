@@ -23,16 +23,10 @@ $ cd themes/starter
 
 ```
 
-### Create a TOML file named theme.toml
+### Create the file /themename/theme.toml
 
-* Create an empty TOML file for this theme named `theme.toml`.
-
-```
-# Create a new file. 
-$ vim theme.toml
-```
-
-* Populate your `theme.toml` file with configuration info. Note that lines starting with `#` are comments.
+* Create an empty TOML file for this theme named `theme.toml`
+and add these contents. Note that lines starting with `#` are comments.
 
 ```
 # Name of the theme itself
@@ -62,7 +56,7 @@ homepage = "https://tom.im"
 
 ### Create a `/themename/static` directory
 
-Even if it's not used, your theme is expected to have a /static directory.
+Even if though it's not used in this example, your theme is expected to have a /static directory.
 
 * Create a directory named `/themename/static`:
 
@@ -70,7 +64,7 @@ Even if it's not used, your theme is expected to have a /static directory.
 $ mkdir static
 ```
 
-### Create an index.html template in the /themename/templates directory
+### Create /themename/templates/index.html file
 
 All themes require a file in the `/themename/templates` subdirectory named `index.html`. (Obviously
 replace `/themename` with whatever you've named your theme.)
@@ -81,43 +75,34 @@ replace `/themename` with whatever you've named your theme.)
 $ mkdir templates
 ```
 
-* Change to that directory.
-
-```bash
-$ cd templates
-```
-* Underneath it create the file `index.html`
-
-```bash
-$ vim index.html
-```
-
-* Populate the `index.html` template as follows and save it:
+* Change to that directory and create the file `index.html` as shown:
 
 ```html
-ls
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ config.description }}">
+    <title>{{ config.title }}</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css" />
+</head>
+<body>
+    {{ section.content | safe }}
+ </body>
+</html>
+
 ```
 
-### Create the home file `_index.md` and put it in the /content directory
+### Create the file `/content/_index.md`
 
-* Return to the root of your project directory.
-
-* For example, visit ~/www/starter/content or type this:
+* Return to the root of your project directory:
 
 ```bash
 $ cd ../content
 ```
 
-* Create the following text file and name it `_index.md`:
-
-```bash
-# Path isn't strictly necessary here because you should be
-# in the /content directory, but this helps you remember
-# the intended directory structure.
-$ vim ~/www/starter/content/ _index.md
-```
-
-* Give it these contents:
+* Create the following text file and name it `_index.md` and give it these contents:
 
 ```
 +++
@@ -137,27 +122,20 @@ static site generator.
 
 The theme is done. Now let Gutenberg know it should be put to use.
 
-* Return to the main Gutenberg directory (not a theme directory). 
-In this example, you'd do the following:
+* Return to the main Gutenberg directory (not a theme directory):
 
 ```bash
 # Change this to the base Gutenberg page for your
 # installation.
-# cd ..  # OR...
-$ cd ~/www/starter
+$ cd .. 
 ```
 
-* Fire up you favorite editor and put this anywhere above the `[extra]` line:
+* Fire up you favorite editor, load `config.toml`, and put this anywhere above the `[extra]` line:
 
 ```
 # Replace with the name of your theme
 theme = "starter"
-
-[extra]
 ```
-
-* Update the `theme=` portion of `config.toml` with the name of the theme:
-
 
 ### Regenerate the site with `gutenberg build`
 
@@ -169,12 +147,13 @@ $ gutenberg build
 
 ### Run the server if necessary
 
+If the Gutenberg server isn't running, fire it up:
+
 ```bash
 $ gutenberg serve
 ```
 
-
-Now take a look at the results in your browser:
+Now take a look at the results in your browser by visiting `https://127.0.0.1:1111`
 
 ![Stripped down index.html home page](images/gutenberg-starter-theme-step1.png)
 
@@ -196,5 +175,6 @@ title = "Simple starter template"
 
 # Todo
 
+* Finish "The theme explained"
 * Do a lesson on an anonymous theme
 * Find out the correct term for what I call an anonymous theme
