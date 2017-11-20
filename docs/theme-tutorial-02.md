@@ -2,7 +2,7 @@
 
 
 
-# Adding a news section
+# Adding an About page and a news section
 
 # TODO: Lots of explanatory material.
 
@@ -23,6 +23,8 @@ At the end of this section you'll have a site that looks like this:
 │   ├── index.html
 │   ├── robots.txt
 │   ├── sitemap.xml
+│   ├── about/
+│   │   └── index.html
 │   └── news/
 │       ├── page1/
 │       │   └── index.html
@@ -37,11 +39,13 @@ At the end of this section you'll have a site that looks like this:
 │       ├── theme.toml
 │       ├── templates/
 │       │   ├── index.html
-│       │   ├── page.htmll
-│       │   └── section.html
+│       │   ├── page.html
+│       │   ├── section.html
+│       │   └── simple.html
 │       └── static/
 ├── content/
 │   ├── _index.md
+│   ├── about.md
 │   └── news/
 │       ├── _index.md
 │       ├── page1.md
