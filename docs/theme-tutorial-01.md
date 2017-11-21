@@ -64,7 +64,7 @@ Contains assets such as graphics files, fonts, or style sheets used solely by th
 
 Contains the Markdown `.md` source files with the actual text content of the site. They are converted into plain HTML for rendering in combination with associated template files files from the `/themes/step1-starter/templates` directory. Each Markdown or `.md` file has front matter specifying which HTML template would be used for this file. In this example, `_index.md` has the line `template = "index.html"` in its front matter. ( (Replace `step1-starter` in the example above with the name of a particular theme, like `hugo` or `starter`.)
 
-In a production site with more than one page the content would have many, many more files, with names like `12-17-2018.md', and they would probably be arranged into subdirectories. This would result in URLS like `example.com/blog/12-17-2018.md` or `example.com/staff/jared/profile.md`
+In a production site with more than one page the content would have many, many more files, with names like `12-17-2018.md`, and they would probably be arranged into subdirectories. This would result in URLS like `example.com/blog/12-17-2018.md` or `example.com/staff/jared/profile.md`
 
 ### `/sass` directory
 
