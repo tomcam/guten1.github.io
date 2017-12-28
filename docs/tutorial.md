@@ -157,7 +157,7 @@ directly should you change your mind about anything.
 First, you're asked what the site's web address (URL) will be. This will be important when
 relative paths to resources in the webbsite are compiled.
 
-```
+```sh
 Welcome to Gutenberg!
 
 > What is the URL of your site? (https://example.com):
@@ -166,14 +166,13 @@ Welcome to Gutenberg!
 For now, it doesn't matter much. For this example feel faree to answer with the local website address preferred by Gutenberg,
 which is `http://127.0.0.1:1111`. The great thing about `config.toml` is that when you deploy to `yourawesomewebsite.com`, changing this value will be all you need to get those relative paths working properly.
  
-```
+```sh
 > What is the URL of your site? (https://example.com): http://127.0.0.1:1111
-
 ```
 
 For example, in Gutenberg templates you'll see constructions like this embedded in the template's HTML:
 
-```
+```html
 <link rel="stylesheet" href="{{ get_url(path="hyde.css") }}">
 ```
 
@@ -185,8 +184,8 @@ The next question is about Sass. Sass is a front end to CSS. You create a style 
 for example, `styles.scss`, and it will run a translation step, then generate a `styles.css` file. 
 This allows you to create much more readable, easy-to-maintain style sheets. For example: 
 
-```
-$font-body-text:    Roboto, Helvetica, sans-serif;
+```css
+$font-body-text: Roboto, Helvetica, sans-serif;
 
 body {
   font: 100% $font-body-text;
@@ -204,7 +203,7 @@ selecting whatever the uppercase option was.
 
 * Press Enter to notify Gutenberg that when found, `.scss` files should be compiled to CSS.
 
-```
+```sh
 > Do you want to enable Sass compilation? [Y/n]:
 ```
 
@@ -217,7 +216,7 @@ schemes themselves are configurable.
 
 * Press the `y` key if you plan for this blog to include code.
 
-```
+```sh
 > Do you want to enable syntax highlighting? [y/N]: y
 
 Done! Your site was created in "/Users/tom/www/mywebsite"
@@ -252,12 +251,12 @@ Assets like logo files, CSS icons, fonts, and so forth usually go in the `static
 
 The `.scss` files used by Sass to generate CSS files go here.
 
- ### `/config.toml` file
+### `/config.toml` file
  
  The file `config.toml` has many options, only a few of which are included in this auto-generated file.
  You can see they contained the answers to questions you were asked after running `gutenberg init`:
  
- ```
+ ```yaml
  # The URL the site will be built for
 base_url = "http://127.0.0.1:1111"
 
@@ -290,7 +289,7 @@ This creates a directory named `hyde` (at `~/www/mywebsite/themes/hyde`) populat
 
 After a pause you see the following:
 
-```
+```sh
 Cloning into 'hyde'...
 remote: Counting objects: 32, done.
 remote: Total 32 (delta 0), reused 0 (delta 0), pack-reused 32
@@ -332,13 +331,13 @@ cd ~/www/mywebsite
 
 * Add this line to config.toml anywhere ABOVE the section marked `[extra]`:
 
-```
+```yaml
 theme = "hyde"
 ```
 
 So that part of `config.toml` will be something along these lines:
 
-```
+```yaml
 theme = "hyde"
 
 [extra]
@@ -363,7 +362,7 @@ We'll write a blog post using markdown.
 
 * Call it `article.md` and save it in /content:
 
-```
+```yaml
 +++ 
 title = "Announcing the Starter theme" 
 template = "page.html" 
