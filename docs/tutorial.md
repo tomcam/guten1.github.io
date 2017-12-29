@@ -17,8 +17,8 @@ This tutorial shows you how to:
 2. Obtain a theme from the Web so you don't have to create a style sheet from scratch
 3. Run Gutenberg as a local web server so you can see the site as well as your users
 
-You will iterate through steps 2 and 3 many times in the course of the tutorial. When you edit the Markdown file used
-for your website's content pages, Gutenberg detects the changes, compiles the HTML files from Markdown files, and deploys them
+You will iterate through steps 2 and 3 many times in the course of the tutorial. When you edit the Markdown files used
+for your website's content pages, Gutenberg detects the changes, generates the HTML files from Markdown files, and deploys them
 to the site's HTML continuously. This combines the best feature of an interactive site editor (quick
 and responsive) with the joys of working with text (less distracting, can be done with light system resource
 usage, and doesn't lock you in to any vendor's software).
