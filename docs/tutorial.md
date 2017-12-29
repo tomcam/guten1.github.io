@@ -15,11 +15,11 @@ This tutorial shows you how to:
 
 1. Use Gutenberg from the command line to generate a minimal site on your local machine
 2. Obtain a theme from the Web so you don't have to create a style sheet from scratch
-3. Run Gutenberg as a local web server so you can see the site as users well
+3. Run Gutenberg as a local web server so you can see the site as well as your users
 
 You will iterate through steps 2 and 3 many times in the course of the tutorial. When you edit the Markdown file used
 for your website's content pages, Gutenberg detects the changes, compiles the HTML files from Markdown files, and deploys them
-to the site's HTML directly continuously. This combines the best feature of an interactive site editor (quick
+to the site's HTML continuously. This combines the best feature of an interactive site editor (quick
 and responsive) with the joys of working with text (less distracting, can be done with light system resource
 usage, and doesn't lock you in to any vendor's software).
 
@@ -69,7 +69,6 @@ dumb questions with patience
 * It's a command-line utility. You pretty much have to be a programmer/devops person to 
 use Gutenberg. Downloading a single file and copying it to a directory
 is arguably a little harder than harder than downloading, then clicking an installer
-* A tiny Gutenberg site is a little more complicated than a tiny HTML site, due to its configuration requirements
 
 ## What you should know before running this tutorial
 
@@ -97,10 +96,9 @@ corporate website with a home page, an About page, different sections, and a blo
 
 ## Download Gutenberg
 
-The first thing to do is obtain the Gutenberg static site generator. It is small and fast, and because it's a command-line utility written in Rust, Gutenberg works on all operating systems that have a Rust compiler and a web server available to them. You don't need to know Rust to use Gutenberg effectively, although understanding Rust's templating will make it easier
-for you to create Gutenberg themes.
+The first thing to do is obtain the Gutenberg static site generator binary. It is small and fast, and because it's a command-line utility written in Rust, Gutenberg works on all operating systems that Rust supports.
 
-At the time of writing, Gutenberg lacks installers for most operating systems but that barely matters. It consists of a single executable file you run from the command line.
+Gutenberg is available in many package managers but we can simply download the binary manually from the site in our case for Mac OS, Windows or Linux.
 
 * Browse to www.getgutenberg.io,  click `GET STARTED` and follow the download instructions.
 
@@ -203,7 +201,7 @@ body {
 }
 ```
 
-Most environments require you to download Sass separately, but one of the niftiest features of Gutenberg is that it does all this internally by duplicating the feature set of Sass without requiring that you install Sass itself.
+Most environments require you to download Sass separately, but one of the niftiest features of Gutenberg is that it does all this internally by leveraging the libsass C++ library without requiring that you install Sass itself.
 
 Note that the possible answers are in mixed case, in this case `Y` and `n`. This means that presing Enter is the same as 
 selecting whatever the uppercase option was.
@@ -283,7 +281,7 @@ The `.scss` files used by Sass to generate CSS files go here.
  The file `config.toml` has many options, only a few of which are included in this auto-generated file.
  You can see they contained the answers to questions you were asked after running `gutenberg init`:
  
- ```yaml
+ ```toml
  # The URL the site will be built for
 base_url = "http://127.0.0.1:1111"
 
@@ -361,7 +359,7 @@ cd ~/www/mywebsite
 
 * Add this line to config.toml anywhere ABOVE the section marked `[extra]`:
 
-```yaml
+```toml
 theme = "hyde"
 
 [extra]
@@ -380,8 +378,8 @@ cd ~/www/mywebsite/content
 
 ### Write the blog post using Markdown syntax
 
-We'll write a blog post using markdown. 
-The content Gutenberg expects also requires a nondisplayed header.
+We'll write a blog post using Markdown. 
+The content Gutenberg expects also requires a non-displayed header.
 
 * Write the following article using a text editor.
 
@@ -447,7 +445,7 @@ date = "2019-11-31T16:20:30+1:00"
 
 If you have multiple blog entries with the same date, you'll need the full date value, like this. Imagine two blog entries or news stories appearing on the same date. You'd choose which went first by adding the full date and time, and making one later. For example, here's the first story, with a publication date of December 1, 2017 at 8:00am.
 
-```yaml
+```toml
 +++ 
 title = "News story 1" 
 template = "page.html" 
@@ -459,7 +457,7 @@ Very short version of story published at 8:00am.
 
 Here's the second story we want to appear further on. It has a publication date of December 1, 2017 at 8:30am.
 
-```yaml
+```toml
 +++ 
 title = "News story 2" 
 template = "page.html" 
@@ -536,7 +534,7 @@ To understand how the Hyde theme works, add a second article.
 
 Name this `article2.md` and save it in /content:
 
-```yaml
+```toml
 +++ 
 title = "Starter theme tutorial launched" 
 template = "page.html" 
