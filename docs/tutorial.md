@@ -163,7 +163,7 @@ Welcome to Gutenberg!
 > What is the URL of your site? (https://example.com):
 ```
 
-For now, it doesn't matter much. For this example feel faree to answer with the local website address preferred by Gutenberg,
+For now, it doesn't matter much. For this example feel free to answer with the local website address preferred by Gutenberg,
 which is `http://127.0.0.1:1111`. The great thing about `config.toml` is that when you deploy to `yourawesomewebsite.com`, changing this value will be all you need to get those relative paths working properly.
  
 ```
@@ -221,10 +221,16 @@ schemes themselves are configurable.
 ```txt
 # Press Enter if you want to accept the default N
 > Do you want to enable syntax highlighting? [y/N]: y
+```
 
+Gutenberg then generates your site, warning you that it will
+look minimalistic because there's no theme, and showing you
+how to run the server:
+
+```txt
 Done! Your site was created in "/Users/tom/www/mywebsite"
 
-**Get started by using the built-in server: gutenberg serve**
+Get started by using the built-in server: gutenberg serve
 There is no built-in theme so you will see a white page.
 Visit https://github.com/Keats/gutenberg for the full documentation.
 ```
@@ -236,9 +242,15 @@ Let's explore what you've just created.
 * If you get a directory listing for new site, you'll find that Gutenberg just did very little for you--a theme is necessary for it to display anything but nonempty HTML files. One hasn't been specified yet.
 
 ```sh
-$ ls mywebsite
-config.toml	sass		templates
-content		static		themes
+$ ls -l mywebsite
+```
+```txt
+-rw-r--r--  1 tom  staff  372 Dec 29 01:11 config.toml
+drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 content
+drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 sass
+drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 static
+drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 templates
+drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 themes```
 ```
 
 ### `/content` directory
