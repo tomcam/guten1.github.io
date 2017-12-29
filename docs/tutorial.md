@@ -1,5 +1,9 @@
 [Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 2](theme-tutorial-02.md)
 
+<!-- 
+012345678901234567890123456789012345678901234567890123456789
+-->
+
 # Gutenberg Tutorial: Using the Gutenberg static website generator
 
 [Gutenberg](https://getgutenberg.io) lets you create high-performance websites quickly. 
@@ -105,11 +109,13 @@ This places the Gutenberg executable in your download directory.
 * Copy the executable to a location on the path. For example, on Macs and many Linux variations the following would work:
 
 ```sh
-# Copy from the OS X Downloads directory to a location on the path.
-# In many operating systems, ~ means the user's home directory,
-# sort of like My Documents on Windows.
+# Copy from the OS X Downloads directory to a location 
+# on the path.
+# In many operating systems, ~ means the user's 
+# home directory, sort of like My Documents on Windows.
 # sudo means run from an elevated adminstrator level.
-# It is not always necessary and depends on the operating system.
+# It is not always necessary and depends 
+# on the operating system.
 $ sudo cp ~/Downloads/gutenberg /usr/local/bin/
 ```
 
@@ -143,7 +149,8 @@ $ cd ~/www
 generate a simple site:
 
 ```sh
-# Replace mywebsite with the root name of your site, like bobsrestaurant or whatever.
+# Replace mywebsite with the root name of your site, 
+# like bobsrestaurant or whatever.
 $ gutenberg init mywebsite
 ```
 
@@ -232,7 +239,8 @@ Done! Your site was created in "/Users/tom/www/mywebsite"
 
 Get started by using the built-in server: gutenberg serve
 There is no built-in theme so you will see a white page.
-Visit https://github.com/Keats/gutenberg for the full documentation.
+Visit https://github.com/Keats/gutenberg for 
+the full documentation.
 ```
 
 Let's explore what you've just created.
@@ -279,11 +287,13 @@ The `.scss` files used by Sass to generate CSS files go here.
  # The URL the site will be built for
 base_url = "http://127.0.0.1:1111"
 
-# Whether to automatically compile all Sass files in the sass directory
+# Whether to automatically compile all Sass files in the 
+# sass directory
 compile_sass = true
 
 # Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Gutenberg
+# Theme can be customised by setting the `highlight_theme` 
+# variable to a theme supported by Gutenberg
 highlight_code = true
 
 ```
@@ -384,9 +394,10 @@ date = "2017-12-01"
 +++ 
 # New Gutenberg theme released
 
-A new, ultra-simplified Gutenberg theme named `Starter` has been 
-added to the gallery. It's a minimalist theme you can build
-on for your next custom Gutenberg theme.
+A new, ultra-simplified Gutenberg theme named `Starter` 
+has been added to the gallery. It's a 
+minimalist theme you can build on 
+for your next custom Gutenberg theme.
 ```
 
 ## Generate the site with `gutenberg build`
@@ -431,7 +442,8 @@ $ cd ~/www/mywebsite
 
 ```sh
 $ gutenberg serve
-Listening for changes in /Users/tom/www/mywebsite/{content, static, templates, sass}
+Listening for changes 
+in /Users/tom/www/mywebsite/{content, static, templates, sass}
 Web server is available at http://127.0.0.1:1111
 ```
 
