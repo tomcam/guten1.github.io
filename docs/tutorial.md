@@ -204,6 +204,8 @@ selecting whatever the uppercase option was.
 * Press Enter to notify Gutenberg that when found, `.scss` files should be compiled to CSS.
 
 ```txt
+# The capitalized choice (Y in this case) is the default.
+# You can just press Enter to accept it.
 > Do you want to enable Sass compilation? [Y/n]:
 ```
 
@@ -217,6 +219,7 @@ schemes themselves are configurable.
 * Press the `y` key if you plan for this blog to include code.
 
 ```txt
+# Press Enter if you want to accept the default N
 > Do you want to enable syntax highlighting? [y/N]: y
 
 Done! Your site was created in "/Users/tom/www/mywebsite"
@@ -285,7 +288,8 @@ $ cd ~/www/mywebsite/themes
 $ git clone https://github.com/Keats/hyde.git
 ```
 
-This creates a directory named `hyde` (at `~/www/mywebsite/themes/hyde`) populated by other directories and files that make up that theme. 
+This creates a directory named `hyde` (for this example, at `~/www/mywebsite/themes/hyde`) 
+populated by other directories and files that make up that theme. 
 
 After a pause you see the following:
 
@@ -313,8 +317,8 @@ Sass source files, and a `screenshot.png` file showing an example home page made
 
 The main difference between the contents of this theme directory and the site's root directory is 
 the lack of a `/content` directory. That's because your site is skinnable using themes. Your site can use
-multiple themes. Only one is active at a time, but they all draw from the `/content` directory for the 
-site's editorial material.
+multiple themes. Only one is active at a time. The content is the same no matter what theme is used.
+They all draw from the `/content` directory for the site's editorial material.
 
 ## Update `/config.toml` with name of current theme
 
@@ -330,12 +334,6 @@ cd ~/www/mywebsite
 * Open the file `config.toml` in a text editor.
 
 * Add this line to config.toml anywhere ABOVE the section marked `[extra]`:
-
-```yaml
-theme = "hyde"
-```
-
-So that part of `config.toml` will be something along these lines:
 
 ```yaml
 theme = "hyde"
@@ -470,6 +468,7 @@ Note how the message went from `Creating 1 page` to `Creating 2 pages`.
 The server is still running and the home page is updated automatically:
 
 ![Updated homepage using Hyde theme](images/gutenberg-hyde-theme-second-article.png)
+
 
 ## TODO
 
