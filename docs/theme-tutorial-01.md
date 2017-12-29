@@ -17,7 +17,7 @@ At the end of this section you'll have a site that looks like this:
 │   └── sitemap.xml
 ├── static/
 ├── themes/
-│   └── step1-step1-starter/
+│   └── step1-starter/
 │       ├── theme.toml
 │       ├── templates/
 │       │   └── index.html
