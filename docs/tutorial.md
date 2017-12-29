@@ -157,7 +157,7 @@ directly should you change your mind about anything.
 First, you're asked what the site's web address (URL) will be. This will be important when
 relative paths to resources in the webbsite are compiled.
 
-```sh
+```
 Welcome to Gutenberg!
 
 > What is the URL of your site? (https://example.com):
@@ -166,7 +166,7 @@ Welcome to Gutenberg!
 For now, it doesn't matter much. For this example feel faree to answer with the local website address preferred by Gutenberg,
 which is `http://127.0.0.1:1111`. The great thing about `config.toml` is that when you deploy to `yourawesomewebsite.com`, changing this value will be all you need to get those relative paths working properly.
  
-```sh
+```
 > What is the URL of your site? (https://example.com): http://127.0.0.1:1111
 ```
 
@@ -203,7 +203,7 @@ selecting whatever the uppercase option was.
 
 * Press Enter to notify Gutenberg that when found, `.scss` files should be compiled to CSS.
 
-```sh
+```txt
 > Do you want to enable Sass compilation? [Y/n]:
 ```
 
@@ -216,7 +216,7 @@ schemes themselves are configurable.
 
 * Press the `y` key if you plan for this blog to include code.
 
-```sh
+```txt
 > Do you want to enable syntax highlighting? [y/N]: y
 
 Done! Your site was created in "/Users/tom/www/mywebsite"
@@ -289,7 +289,7 @@ This creates a directory named `hyde` (at `~/www/mywebsite/themes/hyde`) populat
 
 After a pause you see the following:
 
-```sh
+```txt
 Cloning into 'hyde'...
 remote: Counting objects: 32, done.
 remote: Total 32 (delta 0), reused 0 (delta 0), pack-reused 32
@@ -383,7 +383,7 @@ with the markup files, and the output is pure HTML files the browser can underst
 * Return to the site's root directory:
 
 ```sh
-cd ~/www/mywebsite
+$ cd ~/www/mywebsite
 ```
 
 And run `gutenberg build` like so:
@@ -411,7 +411,7 @@ You'll want another terminal open so you can view files and directory contents.
 # are in a subdirectory named www
 # and that the example is named mywebsite.
 # Change these values as needed.
-cd ~/www/mywebsite
+$ cd ~/www/mywebsite
 ```
 * Run the server with `gutenberg serve`:
 
@@ -441,7 +441,7 @@ To understand how the Hyde theme works, add a second article.
 
 Name this `article2.md` and save it in /content:
 
-```
+```yaml
 +++ 
 title = "Starter theme tutorial launched" 
 template = "page.html" 
