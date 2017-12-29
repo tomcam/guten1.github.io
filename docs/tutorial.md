@@ -250,7 +250,7 @@ drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 content
 drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 sass
 drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 static
 drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 templates
-drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 themes```
+drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 themes
 ```
 
 ### `/content` directory
