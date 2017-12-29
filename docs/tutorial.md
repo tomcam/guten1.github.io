@@ -418,11 +418,11 @@ date = "2017-12-01"
 * The header section isn't displayed. It's used by Gutenberg to provide formatting and other meta-information for the content that follows.
 * The `title` key will appear on your browser's tab, so in this case your tab will read `Announcing the Starter theme`
 * The `template` key expects a value consisting of a quoted string containing the name of a specially formatted HTML file in the `/templates` directory.
-* The `date` key expects a quoted string with a date and optional time in [ISO 8601](https://www.w3.org/TR/NOTE-datetime) format.
+* The `date` key expects a quoted string with a date and optional time in [ISO 8601](https://www.w3.org/TR/NOTE-datetime) format. 
 
 ### Formatting dates more specifically
 
-The ISO 8601 date standard is complex, but the important thing for you to know is that if you want content sorted by something more specific than the date, you need to include the full time in IS0 8601 format. For example:
+The ISO 8601 date standard is complex, but the important thing for you to know is that if you want content sorted by something more specific than the date, you need to include the full time in IS0 8601 format. Here are examples of valid ISO 8601 values in the header:
 
 **Year only: YYYY**
 ```txt
@@ -441,6 +441,32 @@ date = "2019-11-31"
 **Year, month, date hours, minutes, seconds, fraction of a second: YYYY-MM-DDThh:mm:ss+d:ff**
 ```txt
 date = "2019-11-31T16:20:30+1:00" 
+```
+
+### Multiple pages published on the same day require full date/time representation
+
+If you have multiple blog entries with the same date, you'll need the full date value, like this. Imagine two blog entries or news stories appearing on the same date. You'd choose which went first by adding the full date and time, and making one later. For example, here's the first story, with a publication date of December 1, 2017 at 8:00am.
+
+```yaml
++++ 
+title = "News story 1" 
+template = "page.html" 
+date = "2017-12-01T08:00:00+1:00" 
++++ 
+# Story 1
+Very short version of story published at 8:00am.
+```
+
+Here's the second story we want to appear further on. It has a publication date of December 1, 2017 at 8:30am.
+
+```yaml
++++ 
+title = "News story 2" 
+template = "page.html" 
+date = "2017-12-01T08:30:00+1:00" 
++++ 
+# Story 2
+Very short version of story published at 8:30am.
 ```
 
 ## Generate the site with `gutenberg build`
@@ -546,7 +572,7 @@ Note
 
 ## TODO
 
-* maybe show directory tree with eqch new piece of content 
+* In date/time explanation show with both mini stories? And/or do that whole part later where the second article gets added
 * Mention that articles using page.html template need particular front matter and that filename doesn't matter
 * Explain how title works
 
