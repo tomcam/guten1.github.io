@@ -385,7 +385,7 @@ The content Gutenberg expects also requires a non-displayed header.
 
 * Call it `article.md` and save it in /content:
 
-```yaml
+```txt
 +++ 
 title = "Announcing the Starter theme" 
 template = "page.html" 
@@ -402,7 +402,7 @@ for your next custom Gutenberg theme.
 
 Gutenberg actually expects all your content to include a header in a simple key/value format before the Markdown text.
 Here's the header part:
-```yaml
+```txt
 +++ 
 title = "Announcing the Starter theme" 
 template = "page.html" 
