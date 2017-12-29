@@ -420,6 +420,29 @@ date = "2017-12-01"
 * The `template` key expects a value consisting of a quoted string containing the name of a specially formatted HTML file in the `/templates` directory.
 * The `date` key expects a quoted string with a date and optional time in [ISO 8601](https://www.w3.org/TR/NOTE-datetime) format.
 
+### Formatting dates more specifically
+
+The ISO 8601 date standard is complex, but the important thing for you to know is that if you want content sorted by something more specific than the date, you need to include the full time in IS0 8601 format. For example:
+
+**Year only: YYYY**
+```txt
+date = "2019" 
+```
+**Year, month: YYYY-MM**
+```txt
+date = "2019-11" 
+```
+
+**Year, month, date: YYYY-MM-DD**
+```txt
+date = "2019-11-31" 
+```
+
+**Year, month, date hours, minutes, seconds, fraction of a second: YYYY-MM-DDThh:mm:ss+d:ff**
+```txt
+date = "2019-11-31T16:20:30+1:00" 
+```
+
 ## Generate the site with `gutenberg build`
 
 Now it's time to convert the site's stub .md files to HTML. Gutenberg combines HTML templates
