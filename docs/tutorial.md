@@ -28,7 +28,7 @@ Gutenberg specializes in the creation of static sites. It is not really meant to
 Gutenberg excels at creating small to medium sites with some or all of these characteristics
 
 * Brochure sites
-* Academic styles
+* Academic sites
 * Blogs
 * News sites (simple or divided into sections)
 * Personal sites
@@ -47,17 +47,17 @@ Here are reasons both for and against using Gutenberg.
 ### Gutenberg Pros
 
 * The websites Gutenberg creates are normally small and very fast
-* Because the text files you use to create articles and posts using Gutenberg is based on Markdown, it's 
-very easy to read them. None of the angle bracket madness you'll see in HTML. The source code for pages and articles is just Markdown and a little extra configuration in the header.
+* Because the text format you use to create articles and posts using Gutenberg is based on Markdown, it's 
+very easy to read them. There's none of the angle bracket madness you'll see in HTML. The source code for pages and articles is just Markdown and a little extra configuration in the header.
 This lets you concentrate on writing articles instead of counting angle brackets or HTML tags and attributes.
 * Once you know how to use the toolchain, Gutenberg lets you generate sites quickly
-* Gutenberg is fantastic if you want a great-looking site that's also easy to maintain (once you know how it works
+* Gutenberg is fantastic if you want a great-looking site that's also easy to maintain (once you know how it works)
 * You can automate the creation and maintenance of websites
-* You only need a single executable file
-* Has [Sass](http://sass-lang.com/guide) built in (no external programs are run) so
+* Gutenberg is all in a single executable file, so installation is fuss-free
+* Has [Sass](http://sass-lang.com/guide) built in (no external programs are required) so
 maintaining style sheets is easier, especially on big projects
 * It's free, even for commercial use, and [the source code to Gutenberg is available on Github](https://github.com/Keats/gutenberg)
-* Excellent community. Gutenberg's creator, [Vincent Prouillet](https://github.com/Keats), is responsive and tolerates
+* Excellent [community](https://github.com/Keats/gutenberg/issues). Gutenberg's creator, [Vincent Prouillet](https://github.com/Keats), is responsive and tolerates
 dumb questions with patience
 
 ### Gutenberg Cons
