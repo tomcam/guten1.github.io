@@ -223,6 +223,10 @@ schemes themselves are configurable.
 > Do you want to enable syntax highlighting? [y/N]: y
 
 Done! Your site was created in "/Users/tom/www/mywebsite"
+
+**Get started by using the built-in server: gutenberg serve**
+There is no built-in theme so you will see a white page.
+Visit https://github.com/Keats/gutenberg for the full documentation.
 ```
 
 Let's explore what you've just created.
@@ -469,11 +473,15 @@ The server is still running and the home page is updated automatically:
 
 ![Updated homepage using Hyde theme](images/gutenberg-hyde-theme-second-article.png)
 
+## The Hyde theme orders pages by date and time
+
+Note
 
 ## TODO
 
 * maybe show directory tree with eqch new piece of content 
 * Mention that articles using page.html template need particular front matter and that filename doesn't matter
+* Explain how title works
 
 
 # Reference
