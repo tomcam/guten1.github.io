@@ -381,8 +381,9 @@ cd ~/www/mywebsite/content
 ### Write the blog post using Markdown syntax
 
 We'll write a blog post using markdown. 
+The content Gutenberg expects also requires a nondisplayed header.
 
-* Write this article using a text editor.
+* Write the following article using a text editor.
 
 * Call it `article.md` and save it in /content:
 
@@ -399,6 +400,25 @@ has been added to the gallery. It's a
 minimalist theme you can build on 
 for your next custom Gutenberg theme.
 ```
+### How the header works
+
+Gutenberg actually expects all your content to include a header in a simple key/value format before the Markdown text.
+Here's the header part:
+```yaml
++++ 
+title = "Announcing the Starter theme" 
+template = "page.html" 
+date = "2017-12-01" 
++++ 
+```
+
+* The file must start with the header. The header beginds with a line consisting only of ```+++``` 
+* Several key/value pairs may appear; for this theme the minimal key/value pairs are `title`, `template`, and `date` are all required. (The part to the left, for example, `title`, is the key. The `=` is required after the key, and the quoted item to the right is the value.)
+* The ender ends with a second line consisting only of ```+++```
+* The header section isn't displayed. It's used by Gutenberg to provide formatting and other meta-information for the content that follows.
+* The `title` key will appear on your browser's tab, so in this case your tab will read `Announcing the Starter theme`
+* The `template` key expects a value consisting of a quoted string containing the name of a specially formatted HTML file in the `/templates` directory.
+* The `date` key expects a quoted string with a date and optional time in [ISO 8601](https://www.w3.org/TR/NOTE-datetime) format.
 
 ## Generate the site with `gutenberg build`
 
@@ -515,6 +535,8 @@ Note
 * Creating a Gutenberg [theme](https://www.getgutenberg.io/documentation/themes/creating-a-theme/)
 * [Learn Sass](http://sass-lang.com/guide)
 * The CommonMark [Markdown standard](http://commonmark.org/), ((Quick reference))[http://commonmark.org/help/], [10 minute tutorial](http://commonmark.org/help/tutorial/)
+* The [YAML](http://www.yaml.org/about.html) site isn't as informative as the explanation at the site for [Grav](https://learn.getgrav.org/advanced/yaml), a Gutenberg competitor
+* [ISO 8601](https://www.w3.org/TR/NOTE-datetime) date formats are complicated
 
 
 [Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 2](theme-tutorial-02.md)
