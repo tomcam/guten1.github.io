@@ -116,7 +116,7 @@ Template files add HTML formatting to the textual contenet in the Markdown (`.md
 
 ### Create the index template file `/themename/templates/index.html`
 
-{% raw %}
+
 ```html
 
 <!DOCTYPE html>
@@ -135,11 +135,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css"
             <div class="col-9">
 
 
-    
+ {% raw %}   
                 {% block content %}
                     {{ section.content | safe }}
                 {% endblock content %}
-    
+{% endraw %}    
 
             </div><!-- .col-9 -->
             <div class="col-3">
@@ -161,23 +161,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css"
 
 ```
 
-{% endraw %}
-
 ### Create the page template file `/themename/templates/simple.html`
 
 ```html
-{% raw %}
 {% extends "index.html" %}
 {% block content %}
     {{ page.content | safe }}
 {% endblock content %}
-{% endraw %}
 ```
                                  
 ### Create the page template file `/themename/templates/page.html`
 
 ```html
-{% raw %}
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -195,7 +190,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css"
     <a href="{{ get_url(path="./_index.md") }}">Home</a></p>
 </body>
 </html>
-{% endraw %}
 ```
 
 ### Create the section template file `/themename/templates/section.html`
