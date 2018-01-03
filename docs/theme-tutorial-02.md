@@ -118,7 +118,7 @@ Template files add HTML formatting to the textual contenet in the Markdown (`.md
 
 
 ```
-[//]: # ({% raw %})
+
 
 <!DOCTYPE html>
 <html lang="en-us">
@@ -136,9 +136,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css"
             <div class="col-9">
 
     
-                {% block content %}
+[//]: #                {% block content %}
                     {{ section.content | safe }}
-                {% endblock content %}
+[//]: #                {% endblock content %}
  
 
             </div><!-- .col-9 -->
@@ -158,7 +158,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css"
 </body>
 </html>
 
-[//]: # ({% endraw %})
+
 
 ```
 
