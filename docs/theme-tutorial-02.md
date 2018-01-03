@@ -132,11 +132,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css"
     <div class="container">
         <div class="columns">
             <div class="col-9">
-                {% raw %}
+{% raw %}
                 {% block content %}
                     {{ section.content | safe }}
                 {% endblock content %}
-                {% endraw %}
+{% endraw %}
             </div><!-- .col-9 -->
             <div class="col-3">
                 <h1>News</h1>
