@@ -118,7 +118,8 @@ Template files add HTML formatting to the textual contenet in the Markdown (`.md
 
 ```html
 
-[//]: # ({% endraw %})
+[//]: #
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -153,7 +154,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.10/spectre.min.css"
 </body>
 </html>
 
-[//]: # ({% endraw %})
+[//]: #
 
 ```
 
