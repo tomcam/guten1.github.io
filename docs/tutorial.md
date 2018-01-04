@@ -560,6 +560,9 @@ Run `gutenberg build` because there's a new page on the site:
 
 ```sh
 $ gutenberg build
+```
+
+```txt
 Building site...
 -> Creating 2 pages (0 orphan) and 0 sections
 Done in 62ms.
