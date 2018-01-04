@@ -1,4 +1,8 @@
-[Gutenberg static site generator tutorial](https://tomcam.github.io/g.github.io/tutorial) [Build a theme from scratch, step 1](https://tomcam.github.io/g.github.io/theme-tutorial-01) [Build a theme from scratch, step 2](https://tomcam.github.io/g.github.io/theme-tutorial-02)
+[Gutenberg static site generator tutorial](https://tomcam.github.io/g.github.io/tutorial) 
+
+[Build a theme from scratch, step 1](https://tomcam.github.io/g.github.io/theme-tutorial-01) 
+
+[Build a theme from scratch, step 2](https://tomcam.github.io/g.github.io/theme-tutorial-02)
 
 <!-- 
 https://tomcam.github.io/g.github.io/theme-tutorial-02
@@ -589,4 +593,11 @@ Note
 * [ISO 8601](https://www.w3.org/TR/NOTE-datetime) date formats are complicated
 
 
+[Gutenberg static site generator tutorial](https://tomcam.github.io/g.github.io/tutorial) 
+
+[Build a theme from scratch, step 1](https://tomcam.github.io/g.github.io/theme-tutorial-01) 
+
+[Build a theme from scratch, step 2](https://tomcam.github.io/g.github.io/theme-tutorial-02)
+<!--
 [Tutorial](tutorial.md) [Theme tutorial 1](theme-tutorial-01.md) [Theme tutorial 2](theme-tutorial-02.md)
+-->
