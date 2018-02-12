@@ -10,7 +10,7 @@ https://tomcam.github.io/g.github.io/theme-tutorial-02
 <!-- 
 012345678901234567890123456789012345678901234567890123456789
 -->
-d
+
 # Gutenberg Tutorial: Using the Gutenberg static website generator
 
 [Gutenberg](https://getgutenberg.io) lets you create high-performance websites quickly. 
@@ -148,7 +148,7 @@ $ mkdir ~/www
 $ cd ~/www
 ```
 
-## Run `gutenberg init` to create a basic site
+## Run gutenberg init to create a basic site
 
 * From this starting directory you'll run `gutenberg init`, which will
 generate a simple site:
@@ -164,7 +164,7 @@ named  `config.toml`. For this quick demo the answers don't matter
 much but here's what they mean. Keep in mind too that it's easy to go back and edit these values in `config.toml`
 directly should you change your mind about anything.
 
-### Configuration questions for `config.toml`: site URL
+### Configuration questions for config.toml: site URL
 
 First, you're asked what the site's web address (URL) will be. This will be important when
 relative paths to resources in the webbsite are compiled.
@@ -190,7 +190,7 @@ For example, in Gutenberg templates you'll see constructions like this embedded 
 
 As you can imagine `get_url()` resolves to your site's URL using the value in `config.toml` that you just set.
 
-### Configuration questions for `config.toml`: Whether to use Sass
+### Configuration questions for config.toml: Whether to use Sass
 
 The next question is about Sass. Sass is a front end to CSS. You create a style sheet called,
 for example, `styles.scss`, and it will run a translation step, then generate a `styles.css` file. 
@@ -221,7 +221,7 @@ selecting whatever the uppercase option was.
 > Do you want to enable Sass compilation? [Y/n]:
 ```
 
-### Configuration questions for `config.toml`: use syntax highlighting
+### Configuration questions for config.toml: use syntax highlighting
 
 
 Last, you're asked if you want to enable syntax highlighting. This means that should your blog markup contain code,
@@ -267,24 +267,24 @@ drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 templates
 drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 themes
 ```
 
-### `/content` directory
+### /content directory
 
 The empty `/content` directory is where your articles will go. They are written in Markdown, a simplified format that needs to be combined with HTML templates for visual presentation.
 
-### `/templates` directory
+### /templates directory
 
 The empty `/templates` directory is where templates like `page.html` and `index.html` will be merged with the content articles
 to yield formatted content. The appearance can be vastly different depending on how themes are created.
 
-### `/static` directory
+### /static directory
 
 Assets like logo files, CSS icons, fonts, and so forth usually go in the `static` directory.
 
-### `/sass` directory
+### /sass directory
 
 The `.scss` files used by Sass to generate CSS files go here.
 
-### `/config.toml` file
+### /config.toml file
  
  The file `config.toml` has many options, only a few of which are included in this auto-generated file.
  You can see they contained the answers to questions you were asked after running `gutenberg init`:
@@ -345,14 +345,14 @@ If you go further and look in the generated directories, you'll see that they re
 website's root directory. This time they are populated with template files such as `index.html` and `page.html`,
 Sass source files, and a `screenshot.png` file showing an example home page made using the Hyde theme.
 
-### No `/content` directory?
+### Themes have no /content directory
 
 The main difference between the contents of this theme directory and the site's root directory is 
 the lack of a `/content` directory. That's because your site is skinnable using themes. Your site can use
 multiple themes. Only one is active at a time. The content is the same no matter what theme is used.
 They all draw from the `/content` directory for the site's editorial material.
 
-## Update `/config.toml` with name of current theme
+## Update /config.toml with name of current theme
 
 Now you need to specify to Gutenberg what theme is being used (because you could put other
 themes in the `/themes` directory).
@@ -376,7 +376,7 @@ theme = "hyde"
 # Put all your custom variables here
 ```
 
-## Add a page to the `/content` directory
+## Add a page to the /content directory
 
 The site is empty right now. It needs a blog post. 
 
@@ -482,7 +482,7 @@ date = "2017-12-01T08:30:00+1:00"
 Very short version of story published at 8:30am.
 ```
 
-## Generate the site with `gutenberg build`
+## Generate the site with gutenberg build
 
 Now it's time to convert the site's stub .md files to HTML. Gutenberg combines HTML templates
 with the markup files, and the output is pure HTML files the browser can understand.
@@ -502,7 +502,7 @@ Building site...
 Done in 22ms.
 ```
 
-## View the site using the `gutenberg serve` web server
+## View the site using the gutenberg serve web server
 
 Gutenberg can run as a web server, allowing you to view the site exactly as end users will see it upon publishing
 to the production server.
@@ -564,7 +564,7 @@ it was built line by line.
 
 ```
 
-Run `gutenberg build` because there's a new page on the site:
+Run gutenberg build because there's a new page on the site:
 
 ```sh
 $ gutenberg build
