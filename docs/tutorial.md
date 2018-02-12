@@ -10,7 +10,7 @@ https://tomcam.github.io/g.github.io/theme-tutorial-02
 <!-- 
 012345678901234567890123456789012345678901234567890123456789
 -->
-
+d
 # Gutenberg Tutorial: Using the Gutenberg static website generator
 
 [Gutenberg](https://getgutenberg.io) lets you create high-performance websites quickly. 
@@ -369,6 +369,8 @@ cd ~/www/mywebsite
 
 ```ini
 theme = "hyde"
+
+# Theme line goes ABOVE this one
 
 [extra]
 # Put all your custom variables here
