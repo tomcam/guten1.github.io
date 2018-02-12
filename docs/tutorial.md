@@ -452,8 +452,8 @@ date = "2019-11-31T16:20:30+1:00"
 
 If you have multiple blog entries with the same date, you'll need the full date value, like this. Imagine two blog entries or news stories appearing on the same date. You'd choose which went first by adding the full date and time, and making one later. For example, here's the first story, with a publication date of December 1, 2017 at 8:00am.
 
-```txt
-+++ 
+```ini
++++
 title = "News story 1" 
 template = "page.html" 
 date = "2017-12-01T08:00:00+1:00" 
@@ -464,7 +464,7 @@ Very short version of story published at 8:00am.
 
 Here's the second story we want to appear further on. It has a publication date of December 1, 2017 at 8:30am.
 
-```txt
+```ini
 +++ 
 title = "News story 2" 
 template = "page.html" 
