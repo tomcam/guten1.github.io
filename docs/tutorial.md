@@ -169,7 +169,7 @@ directly should you change your mind about anything.
 First, you're asked what the site's web address (URL) will be. This will be important when
 relative paths to resources in the webbsite are compiled.
 
-```
+```text
 Welcome to Gutenberg!
 
 > What is the URL of your site? (https://example.com):
@@ -178,7 +178,7 @@ Welcome to Gutenberg!
 For now, it doesn't matter much. For this example feel free to answer with the local website address preferred by Gutenberg,
 which is `http://127.0.0.1:1111`. The great thing about `config.toml` is that when you deploy to `yourawesomewebsite.com`, changing this value will be all you need to get those relative paths working properly.
  
-```
+```text
 > What is the URL of your site? (https://example.com): http://127.0.0.1:1111
 ```
 
@@ -215,7 +215,7 @@ selecting whatever the uppercase option was.
 
 * Press Enter to notify Gutenberg that when found, `.scss` files should be compiled to CSS.
 
-```txt
+```text
 # The capitalized choice (Y in this case) is the default.
 # You can just press Enter to accept it.
 > Do you want to enable Sass compilation? [Y/n]:
@@ -230,7 +230,7 @@ schemes themselves are configurable.
 
 * Press the `y` key if you plan for this blog to include code.
 
-```txt
+```text
 # Press Enter if you want to accept the default N
 > Do you want to enable syntax highlighting? [y/N]: y
 ```
@@ -239,7 +239,7 @@ Gutenberg then generates your site, warning you that it will
 look minimalistic because there's no theme, and showing you
 how to run the server:
 
-```txt
+```text
 Done! Your site was created in "/Users/tom/www/mywebsite"
 
 Get started by using the built-in server: gutenberg serve
@@ -257,7 +257,8 @@ Let's explore what you've just created.
 ```sh
 $ ls -l mywebsite
 ```
-```txt
+
+```text
 -rw-r--r--  1 tom  staff  372 Dec 29 01:11 config.toml
 drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 content
 drwxr-xr-x  2 tom  staff   64 Dec 29 01:11 sass
@@ -288,7 +289,7 @@ The `.scss` files used by Sass to generate CSS files go here.
  The file `config.toml` has many options, only a few of which are included in this auto-generated file.
  You can see they contained the answers to questions you were asked after running `gutenberg init`:
  
- ```
+ ```ini
  # The URL the site will be built for
 base_url = "http://127.0.0.1:1111"
 
@@ -324,7 +325,7 @@ populated by other directories and files that make up that theme.
 
 After a pause you see the following:
 
-```txt
+```text
 Cloning into 'hyde'...
 remote: Counting objects: 32, done.
 remote: Total 32 (delta 0), reused 0 (delta 0), pack-reused 32
@@ -366,7 +367,7 @@ cd ~/www/mywebsite
 
 * Add this line to config.toml anywhere ABOVE the section marked `[extra]`:
 
-```
+```ini
 theme = "hyde"
 
 [extra]
@@ -392,7 +393,7 @@ The content Gutenberg expects also requires a non-displayed header.
 
 * Call it `article.md` and save it in /content:
 
-```txt
+```text
 +++ 
 title = "Announcing the Starter theme" 
 template = "page.html" 
@@ -409,7 +410,8 @@ for your next custom Gutenberg theme.
 
 Gutenberg actually expects all your content to include a header in a simple key/value format before the Markdown text.
 Here's the header part:
-```txt
+
+```text
 +++ 
 title = "Announcing the Starter theme" 
 template = "page.html" 
@@ -430,21 +432,25 @@ date = "2017-12-01"
 The ISO 8601 date standard is complex, but the important thing for you to know is that if you want content sorted by something more specific than the date, you need to include the full time in IS0 8601 format. Here are examples of valid ISO 8601 values in the header:
 
 **Year only: YYYY**
-```txt
+
+```ini
 date = "2019" 
 ```
 **Year, month: YYYY-MM**
-```txt
+
+```ini
 date = "2019-11" 
 ```
 
 **Year, month, date: YYYY-MM-DD**
-```txt
+
+```ini
 date = "2019-11-31" 
 ```
 
 **Year, month, date hours, minutes, seconds, fraction of a second: YYYY-MM-DDThh:mm:ss+d:ff**
-```txt
+
+```ini
 date = "2019-11-31T16:20:30+1:00" 
 ```
 
@@ -541,7 +547,7 @@ To understand how the Hyde theme works, add a second article.
 
 Name this `article2.md` and save it in /content:
 
-```
+```ini
 +++ 
 title = "Starter theme tutorial launched" 
 template = "page.html" 
@@ -562,7 +568,7 @@ Run `gutenberg build` because there's a new page on the site:
 $ gutenberg build
 ```
 
-```txt
+```text
 Building site...
 -> Creating 2 pages (0 orphan) and 0 sections
 Done in 62ms.
