@@ -417,7 +417,7 @@ Here's the header part:
 +++ 
 title = "Announcing the Starter theme" 
 template = "page.html" 
-date = "2017-12-01" 
+date = 2017-12-01 
 +++ 
 ```
 
@@ -427,7 +427,7 @@ date = "2017-12-01"
 * The header section isn't displayed. It's used by Gutenberg to provide formatting and other meta-information for the content that follows.
 * The `title` key will appear on your browser's tab, so in this case your tab will read `Announcing the Starter theme`
 * The `template` key expects a value consisting of a quoted string containing the name of a specially formatted HTML file in the `/templates` directory.
-* The `date` key expects a quoted string with a date and optional time in [ISO 8601](https://www.w3.org/TR/NOTE-datetime) format. 
+* The `date` key expects a rigidly formatted date and optional time in [ISO 8601](https://www.w3.org/TR/NOTE-datetime) format. 
 
 ### Formatting dates more specifically
 
@@ -436,24 +436,24 @@ The ISO 8601 date standard is complex, but the important thing for you to know i
 **Year only: YYYY**
 
 ```ini
-date = "2019" 
+date = 2019 
 ```
 **Year, month: YYYY-MM**
 
 ```ini
-date = "2019-11" 
+date = 2019-11 
 ```
 
 **Year, month, date: YYYY-MM-DD**
 
 ```ini
-date = "2019-11-31" 
+date = 2019-11-31 
 ```
 
 **Year, month, date hours, minutes, seconds, fraction of a second: YYYY-MM-DDThh:mm:ss+d:ff**
 
 ```ini
-date = "2019-11-31T16:20:30+1:00" 
+date = 2019-11-31T16:20:30+1:00 
 ```
 
 ### Multiple pages published on the same day require full date/time representation
